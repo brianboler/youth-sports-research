@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youth Sports in America — Data Research Compendium</title>
+  <meta name="description" content="A data-driven research compendium on the transformation of youth sports: social media culture, the cost crisis, and the NIL revolution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     TOP NAV
+     ============================================================ -->
+<nav class="top-nav" id="top-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="nav-brand-label">Youth Sports in America</span>
+      <span class="nav-brand-tag">Data Research · 2024–2026</span>
+    </div>
+    <div class="nav-divider"></div>
+    <ul class="nav-links">
+      <li><a href="#social-media" class="nav-link" data-section="social-media"><span class="nav-number">01</span> Social Media</a></li>
+      <li><a href="#costs" class="nav-link" data-section="costs"><span class="nav-number">02</span> The Cost Crisis</a></li>
+      <li><a href="#nil" class="nav-link" data-section="nil"><span class="nav-number">03</span> NIL Revolution</a></li>
+    </ul>
+    <button class="btn-export" onclick="window.print()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v8M5 6l3 3 3-3M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
+      Export PDF
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Research Compendium · All Data Sourced &amp; Attributed</div>
+    <h1 class="hero-title">Youth Sports<br><span>in America</span></h1>
+    <p class="hero-subtitle">Three forces are reshaping how kids play, how families pay, and how the next generation of athletes build their brand — with data to prove it.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number">$40B+</span>
+        <span class="hero-stat-label">Annual family spending on youth sports — twice the NFL's cash flow</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">+46%</span>
+        <span class="hero-stat-label">Cost surge since 2019 — double the rate of U.S. inflation</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">$2.75B</span>
+        <span class="hero-stat-label">NIL market size in 2025–26 — up from $917M at launch in 2021</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">Age 6</span>
+        <span class="hero-stat-label">Youngest athlete to ever sign a Name, Image &amp; Likeness deal</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Explore the data</span>
+      <div class="hero-scroll-dots">
+        <a href="#social-media" class="hero-scroll-dot hero-scroll-dot--teal" title="Social Media"></a>
+        <a href="#costs" class="hero-scroll-dot hero-scroll-dot--orange" title="Costs"></a>
+        <a href="#nil" class="hero-scroll-dot hero-scroll-dot--blue" title="NIL"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     SECTION 01 — SOCIAL MEDIA
+     ============================================================ -->
+<section id="social-media" class="section section--teal">
+  <div class="section-inner">
+
+    <header class="section-header">
+      <div>
+        <div class="section-label">Section 01</div>
+        <h2 class="section-title">Social Media &amp;<br>Youth Sports Culture</h2>
+        <p class="section-subtitle">From highlight reels to recruiting pipelines — how Instagram and TikTok have rewired the youth athletics ecosystem, turned follower counts into currency, and created a generation of athlete-creators.</p>
+      </div>
+    </header>
+
+    <!-- ── KEY STATISTICS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Key Statistics</span></div>
+
+    <div class="stat-grid">
+      <div class="stat-card stat-card--teal fade-in" data-delay="0">
+        <div class="stat-number">80%+</div>
+        <div class="stat-desc">of athletes use social media 2+ hours per day — with a mean of <strong>4 hours daily</strong></div>
+        <div class="stat-source">Sports Psychiatry (Hogrefe), Nov 2023</div>
+      </div>
+      <div class="stat-card stat-card--teal fade-in" data-delay="80">
+        <div class="stat-number">72%</div>
+        <div class="stat-desc">of fans say TikTok motivates them to physically play sports</div>
+        <div class="stat-source">Stagwell / National Research Group, Jan 2026</div>
+      </div>
+      <div class="stat-card stat-card--teal fade-in" data-delay="160">
+        <div class="stat-number">62%</div>
+        <div class="stat-desc">prefer watching sports on social media over traditional TV</div>
+        <div class="stat-source">Stagwell / National Research Group, Jan 2026</div>
+      </div>
+      <div class="stat-card stat-card--teal fade-in" data-delay="240">
+        <div class="stat-number">31%</div>
+        <div class="stat-desc">of youth athletes now measure their own success by social media presence</div>
+        <div class="stat-source">BSN Sports Survey / Youth Sports Business Report, Nov 2025</div>
+      </div>
+    </div>
+
+    <!-- ── CHARTS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Charts &amp; Trends</span></div>
+
+    <!-- Chart 1: Key stats horizontal bar -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">Social Media's Grip on Youth Sports</div>
+          <div class="chart-subtitle">Key behavioral metrics — ordered by magnitude (% of respondents)</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-social', 'social-media-youth-sports-stats.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:240px;">
+        <canvas id="chart-social"></canvas>
+      </div>
+      <div class="chart-note">
+        Sources: Sports Psychiatry/Hogrefe (Nov 2023), Stagwell/NRG (Jan 2026), BSN Sports Survey (Nov 2025). Each metric independently sourced — see citations below.
+      </div>
+    </div>
+
+    <!-- Chart 2: The Athlete Creator Economy (NEW) -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">The Athlete Creator Economy: Year-Over-Year Explosion (2016–2026)</div>
+          <div class="chart-subtitle">Global influencer marketing industry size — the ecosystem that turned athletes into media companies and follower counts into dollar signs</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-creator-economy', 'athlete-creator-economy-growth.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:320px;">
+        <canvas id="chart-creator-economy"></canvas>
+      </div>
+      <div class="chart-note">
+        Sources: Influencer Marketing Hub Benchmark Reports (2016–2025 confirmed actual data); 2026 figure projected by multiple industry analysts. $1.7B (2016) → $32.55B (2025) → ~$40B projected (2026) — a 19× expansion in a decade. COVID accelerated the market 49% in 2020 alone as screen time surged. Athletes are the fastest-growing creator segment; average athlete deal size grew 100% from 2024 to 2025 alone (OpenSponsorship, 2026).
+      </div>
+    </div>
+
+    <!-- ── EVIDENCE & SOURCES ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Evidence &amp; Sources</span></div>
+
+    <div class="quotes-grid">
+
+      <div class="quote-card quote-card--teal quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Followers = Currency</span></div>
+        <p class="quote-text">"A tweet would generate athletes <strong>$10 from every 1,000 followers, $3–$4 per follower via TikTok, and $4–$7 per follower through YouTube.</strong>" — Opendorse CEO Blake Lawrence</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Newsweek / Associated Press<span>NIL Earnings Analysis · June 2021</span></div>
+          <a href="https://www.newsweek.com/college-athletes-could-make-20-per-instagram-follower-some-nil-laws-take-effect-1605611" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Livvy Dunne Model</span></div>
+        <p class="quote-text">"It's the path former LSU gymnast Livvy Dunne pioneered as she <strong>racked up 8 million TikTok followers and millions in endorsement deals</strong> before announcing her retirement from her sport last spring."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Like and Subscribe / Substack<span>The NIL Gold Rush: How 499,000 College Athletes Are Becoming Creators · Oct 2025</span></div>
+          <a href="https://likeandsubscribenews.substack.com/p/the-nil-gold-rush-how-499000-college" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Recruiting on Your Phone</span></div>
+        <p class="quote-text">"<strong>If you are a serious recruit in 2026, you are not just being evaluated on the field, you are being evaluated on your phone.</strong> College coaches are on X, Instagram, TikTok, and YouTube every day, and they are absolutely checking your profiles."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Pathley<span>Social Media for Recruiting Guide · February 2026</span></div>
+          <a href="https://www.pathley.ai/blog-posts/social-media-for-recruiting-guide" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">College Coaches</span></div>
+        <p class="quote-text">"<strong>'More than ever, social media is important,'</strong> says Gettysburg head basketball coach B.J. Dunne. 'When we're not physically able to go to events, it's another way for us to dig up some names and do some research.'"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">NCSA College Recruiting<span>Coaches on Social Media Discovery · October 2025</span></div>
+          <a href="https://www.ncsasports.org/recruiting/contacting-college-coaches/social-media" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">499,000 Creators</span></div>
+        <p class="quote-text">"<strong>The NIL Gold Rush: How 499,000 College Athletes are Becoming Creators</strong>" — with social follower count driving deal value for virtually every one of them.</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Like and Subscribe / Substack<span>October 2025</span></div>
+          <a href="https://likeandsubscribenews.substack.com/p/the-nil-gold-rush-how-499000-college" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Pew Research</span></div>
+        <p class="quote-text">"Majorities of teens on Instagram and TikTok say they go there to <strong>keep up with athletes or celebrities.</strong> This falls to 37% among those on Snapchat."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Pew Research Center<span>Teens' Experiences on TikTok, Instagram and Snapchat · April 2026</span></div>
+          <a href="https://www.pewresearch.org/internet/2026/04/15/teens-experiences-on-tiktok-instagram-and-snapchat/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Sports Psychiatry</span></div>
+        <p class="quote-text">"<strong>Over 80% of athletes reported two or more hours of social media use daily,</strong> with a mean of <strong>4 hours of use per day.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Sports Psychiatry (Hogrefe)<span>Peer-reviewed study · November 2023</span></div>
+          <a href="https://econtent.hogrefe.com/doi/10.1024/2674-0052/a000060" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Aspen Institute</span></div>
+        <p class="quote-text">"<strong>Child athletes are being recorded now from the moment they join organized sports.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Aspen Institute Project Play<span>State of Play 2025: 10 Youth Sports Trends to Watch</span></div>
+          <a href="https://projectplay.org/state-of-play-2025/10-youth-sports-trends-to-watch" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Stagwell / NRG</span></div>
+        <p class="quote-text">"<strong>62% of sports fans enjoy watching sports content on social media more than on traditional TV.</strong> 72% say TikTok, in particular, motivates them to play... 50% prefer watching short clips, highlights or behind-the-scenes moments over full games (60% for Gen Z)."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Stagwell / National Research Group<span>Sports &amp; Social Media Study · January 2026</span></div>
+          <a href="https://www.stagwellglobal.com/what-the-data-say-62-enjoy-watching-sports-on-social-media-more-than-on-tv/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 02 — COSTS
+     ============================================================ -->
+<section id="costs" class="section section--orange">
+  <div class="section-inner">
+
+    <header class="section-header">
+      <div>
+        <div class="section-label">Section 02</div>
+        <h2 class="section-title">The Cost Crisis in<br>Youth Sports</h2>
+        <p class="section-subtitle">Average family spending on youth sports has surged 46% in five years — double the rate of U.S. inflation. The $40 billion now flowing through youth sports dwarfs the NFL, yet the average masks extremes that reach $25,000 per family per year.</p>
+      </div>
+    </header>
+
+    <!-- ── KEY STATISTICS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Key Statistics</span></div>
+
+    <div class="stat-grid">
+      <div class="stat-card stat-card--orange fade-in" data-delay="0">
+        <div class="stat-number">$40B+</div>
+        <div class="stat-desc">Total U.S. family spending on youth sports — <strong>twice the cash flow of the NFL</strong></div>
+        <div class="stat-source">Aspen Institute Project Play, Feb 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="60">
+        <div class="stat-number">+105%</div>
+        <div class="stat-desc">Basketball cost increase in just 5 years — the average family now pays <strong>more than double</strong> what they did in 2019</div>
+        <div class="stat-source">Aspen Institute Project Play, Feb 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="120">
+        <div class="stat-number">+46%</div>
+        <div class="stat-desc">Overall cost surge since 2019 across all youth sports — average family spend now $1,016</div>
+        <div class="stat-source">Aspen Institute Project Play, Feb 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="180">
+        <div class="stat-number">2×</div>
+        <div class="stat-desc">The rate of U.S. inflation — youth sports costs are rising at twice the pace of the broader economy</div>
+        <div class="stat-source">Aspen Institute, State of Play 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="240">
+        <div class="stat-number">$1,016</div>
+        <div class="stat-desc">Average U.S. family spending on a child's <em>primary sport</em> in 2024 — nearly $1,500 when all sports are counted</div>
+        <div class="stat-source">Aspen Institute Project Play, Feb 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="300">
+        <div class="stat-number">$25K</div>
+        <div class="stat-desc">High end of what families reported spending per year in the 2024 Aspen survey</div>
+        <div class="stat-source">Aspen Institute Project Play, Feb 2025</div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="360">
+        <div class="stat-number">$15K</div>
+        <div class="stat-desc">Annual total at the high end of competitive travel baseball programs, when everything is counted</div>
+        <div class="stat-source">Baseball Mode / Beyond the Dugout, Oct 2024</div>
+      </div>
+    </div>
+
+    <!-- ── CHARTS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Charts &amp; Trends</span></div>
+
+    <!-- Row: sport cost + spending categories -->
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Sport-by-Sport Cost Surge</div>
+            <div class="chart-subtitle">Avg. annual family spend, 2019 vs. 2024 — ordered by % increase</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-sport-cost', 'youth-sports-cost-by-sport.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:260px;"><canvas id="chart-sport-cost"></canvas></div>
+        <div class="chart-note">Source: Kiplinger citing Aspen Institute / Project Play (~May 2026) and Project Play Feb 2025. Basketball +105%, Soccer +69%, Baseball +68% over 5 years.</div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Where Families Spend</div>
+            <div class="chart-subtitle">Avg. annual spend per child per sport, by category</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-cost-breakdown', 'youth-sports-spending-breakdown.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:260px;"><canvas id="chart-cost-breakdown"></canvas></div>
+        <div class="chart-note">Source: Aspen Institute / Project Play, Youth Sports Facts: Challenges. Travel now surpasses all other categories including lessons and equipment.</div>
+      </div>
+
+    </div>
+
+    <!-- Full-width: cost spectrum (NEW) -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">The Real Price Tag: From Average to Extreme</div>
+          <div class="chart-subtitle">What families actually pay across different levels of youth sports commitment</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-cost-ladder', 'youth-sports-cost-spectrum.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:300px;"><canvas id="chart-cost-ladder"></canvas></div>
+      <div class="chart-note">
+        Sources: Aspen Institute Feb 2025 (national avg, high end); Kiplinger / Project Play (teen avg); Empower Jun 2025 (hockey); Baseball Mode / Beyond the Dugout Oct 2024 (travel baseball). The Aspen Institute "average" of $1,016 is accurate — but masks a range from $0 to $25,000. The jump from $2,583 to $15,000 represents the travel sports premium that is bankrupting middle-class families.
+      </div>
+    </div>
+
+    <!-- ── EVIDENCE & SOURCES ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Evidence &amp; Sources</span></div>
+
+    <div class="quotes-grid">
+
+      <div class="quote-card quote-card--orange quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Bigger Than the NFL</span></div>
+        <p class="quote-text">"<strong>The $40 billion now spent by families on youth sports is twice the amount of cash flowing through the NFL,</strong> the most lucrative sports league in the world, and does not include the public spend by schools and municipalities, or that of private facility operators and sponsors."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Project Play / Aspen Institute<span>Family Spending Survey · February 2025</span></div>
+          <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange quote-card--featured fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Washington Post, Jan 2026</span></div>
+        <p class="quote-text">"Family spending on youth sports jumped <strong>46 percent from 2019 to 2024, reaching an estimated $40 billion a year. That's more than the annual revenues of the NFL and NBA combined.</strong>" One Florida mother estimates she spends at least $8,000 a year on baseball for her 12-year-old — just club fees alone run $3,000.</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">The Washington Post<span>The soaring price of youth sports: $50 to try out, $3,000 to play · January 2026</span></div>
+          <a href="https://www.washingtonpost.com/business/2026/01/07/youth-sports-cost-parents-investors-profit/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The True Range</span></div>
+        <p class="quote-text">"In the 2024 survey, <strong>parents estimated their sports costs ranged from nothing to almost $25,000.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Project Play / Aspen Institute<span>Family Spending Survey · February 2025</span></div>
+          <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Basketball +105%</span></div>
+        <p class="quote-text">"Within five years, the average basketball parent spent <strong>105% more on their child</strong> in that sport. Parents in soccer (69%) and baseball (68%) also paid significantly more."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Project Play / Aspen Institute<span>Family Spending Survey · February 2025</span></div>
+          <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Doubles Inflation</span></div>
+        <p class="quote-text">"<strong>That's twice the rate of price inflation in the U.S. economy during the same period.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Aspen Institute Project Play<span>State of Play 2025: 10 Youth Sports Trends to Watch</span></div>
+          <a href="https://projectplay.org/state-of-play-2025/10-youth-sports-trends-to-watch" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Families Going Into Debt</span></div>
+        <p class="quote-text">"A Good Sports–Harris Poll report found <strong>75% of parents considered pulling kids from sports, 58% said equipment is a financial strain, and nearly one in five took on debt.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Monee (citing Good Sports / Harris Poll)<span>How to Budget for Youth Sports · October 2025</span></div>
+          <a href="https://monee-app.com/blog/how-to-budget-for-youth-sports-with-a-seasonbyseason-plan" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Raiding Emergency Funds</span></div>
+        <p class="quote-text">"A 2025 New York Life survey found that <strong>25% of travel sports parents have pulled from their savings or emergency fund</strong> to cover costs."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Baseball Mode (citing New York Life 2025)<span>Travel Baseball 101 · October 2024</span></div>
+          <a href="https://baseballmode.com/blogs/blog/travel-baseball-101" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Market Context</span></div>
+        <p class="quote-text">"<strong>The global youth sports market reached an estimated $56 billion in 2025 and is projected to hit $154.5 billion by 2035</strong>, a compound annual growth rate of 10.68%... The United States accounts for the largest single share at over $40 billion." Critics use the term <strong>'youth sports industrial complex'</strong> to describe how commercialization has shifted the purpose of youth athletics from development and fun toward revenue generation."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Strive (citing Business Research Insights)<span>The State of Youth Sports Business · April 2026</span></div>
+          <a href="https://joinstriveon.com/blog/youth-sports-business" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Equity Gap</span></div>
+        <p class="quote-text">"The income-based participation gap has reached <strong>20.2 percentage points: children from the wealthiest families are nearly twice as likely to play organized sports</strong> as those from the lowest-income families."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Strive (citing Project Play 2025)<span>The State of Youth Sports Business · April 2026</span></div>
+          <a href="https://joinstriveon.com/blog/youth-sports-business" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Headline Stat</span></div>
+        <p class="quote-text">"The average U.S. sports family spent <strong>$1,016 on their child's primary sport in 2024, a 46% increase since 2019,</strong> according to the Aspen Institute's latest parent survey in partnership with Utah State University and Louisiana Tech University."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Project Play / Aspen Institute<span>Family Spending Survey · February 2025</span></div>
+          <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Raw Dollar Jumps</span></div>
+        <p class="quote-text">"Since 2019, average annual family spending on baseball climbed from <strong>$660 to $1,113, while soccer rose from $537 to $910 and basketball increased from $427 to $876.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Kiplinger (citing Project Play)<span>What Families Are Really Spending to Keep Kids in Sports · ~May 2026</span></div>
+          <a href="https://www.kiplinger.com/personal-finance/family-savings/what-families-are-really-spending-to-keep-kids-in-sports" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Travel is #1 Cost</span></div>
+        <p class="quote-text">"<strong>Travel is now the costliest feature in youth sports.</strong> On average across all sports, parents spent more annually on travel ($260 per sport, per child) than equipment ($154), private lessons ($183), registration fees ($168), and camps ($111)."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Project Play / Aspen Institute<span>Youth Sports Facts: Challenges</span></div>
+          <a href="https://projectplay.org/youth-sports/facts/challenges" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Travel Baseball: $4K–$15K</span></div>
+        <p class="quote-text">"At the high end of competitive travel programs, <strong>total annual spend reaches $10,000 to $15,000 per player when everything is counted.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Baseball Mode (citing Beyond the Dugout 2025 + Project Play)<span>Travel Baseball 101 · October 2024</span></div>
+          <a href="https://baseballmode.com/blogs/blog/travel-baseball-101" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Cooperstown: $1,900 Just to Enter</span></div>
+        <p class="quote-text">"<strong>Cooperstown Dreams Park costs approximately $1,900 per player just for entry,</strong> plus all your family's travel expenses to New York. Perfect Game showcases for older players seeking college exposure run $700–$1,000 per event."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">eSports Insurance<span>How Much Does It Cost to Play Travel Baseball · April 2025</span></div>
+          <a href="https://esportsinsurance.com/how-much-does-it-cost-to-play-travel-baseball/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Teen Premium</span></div>
+        <p class="quote-text">"...with <strong>families spending nearly $2,000 annually on teens ages 15 to 18.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Kiplinger (citing Project Play)<span>What Families Are Really Spending to Keep Kids in Sports · ~May 2026</span></div>
+          <a href="https://www.kiplinger.com/personal-finance/family-savings/what-families-are-really-spending-to-keep-kids-in-sports" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 03 — NIL
+     ============================================================ -->
+<section id="nil" class="section section--blue">
+  <div class="section-inner">
+
+    <header class="section-header">
+      <div>
+        <div class="section-label">Section 03</div>
+        <h2 class="section-title">The NIL Revolution<br>Reaches Youth Sports</h2>
+        <p class="section-subtitle">Name, Image &amp; Likeness deals have exploded from a $917M market in 2021 to a $2.75 billion industry in 2025–26 — and the offers are now reaching high school sophomores, 9-year-olds, and even a 6-year-old golfer.</p>
+      </div>
+    </header>
+
+    <!-- ── KEY STATISTICS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Key Statistics</span></div>
+
+    <div class="stat-grid">
+      <div class="stat-card stat-card--blue fade-in" data-delay="0">
+        <div class="stat-number">$10–12M</div>
+        <div class="stat-desc">Reported 4-year deal range for <strong>17-year-old QB Bryce Underwood</strong> to sign with Michigan — the largest HS NIL deal ever reported</div>
+        <div class="stat-source">Heavy.com / Athlon Sports, December 2024</div>
+      </div>
+      <div class="stat-card stat-card--blue fade-in" data-delay="80">
+        <div class="stat-number">Age 6</div>
+        <div class="stat-desc">Youngest athlete ever to sign an NIL deal — golfer Patton Green. A 9-year-old recently signed a six-figure contract</div>
+        <div class="stat-source">CleanKonnect, July 2023</div>
+      </div>
+      <div class="stat-card stat-card--blue fade-in" data-delay="160">
+        <div class="stat-number">$2.75B</div>
+        <div class="stat-desc">NIL market in 2025–26 — up <strong>199%</strong> from $917M when the market launched in 2021</div>
+        <div class="stat-source">Opendorse "NIL at Four" Report, July 2025</div>
+      </div>
+      <div class="stat-card stat-card--blue fade-in" data-delay="240">
+        <div class="stat-number">45</div>
+        <div class="stat-desc">U.S. states (plus D.C.) now allowing some form of NIL for high school athletes — near-universal adoption</div>
+        <div class="stat-source">2aDays, December 2025</div>
+      </div>
+    </div>
+
+    <!-- ── CHARTS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Charts &amp; Trends</span></div>
+
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">The NIL Market Explosion</div>
+            <div class="chart-subtitle">Total projected NIL market size (USD millions)</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-market', 'nil-market-growth.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;"><canvas id="chart-nil-market"></canvas></div>
+        <div class="chart-note">Sources: Opendorse "NIL at 1" (2021–22: $917M); Opendorse "NIL at 3" (2023–24: $1.17B confirmed; 2024–25: $1.67B confirmed); Opendorse "NIL at Four" July 2025 (2025–26: $2.75B; 2028–29 trajectory: $3.15B). Dashed = projected. All four Opendorse reports are the authoritative annual benchmark for the NIL market.</div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Eye-Popping Individual Deals</div>
+            <div class="chart-subtitle">High school &amp; youth athlete NIL valuations / reported deal values (USD millions)</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-deals', 'nil-high-school-deals.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;"><canvas id="chart-nil-deals"></canvas></div>
+        <div class="chart-note">Sources: Volt Feb 2026 (Underwood); CBS News Dec 2022 (James, Williams, Manning); NPR Apr 2026 (NC athlete); CleanKonnect Jul 2023 (Wadood Jr.). Bronny James, Mikey Williams, Arch Manning = On3 NIL valuations. Others = reported deal values.</div>
+      </div>
+
+    </div>
+
+    <!-- ── EVIDENCE & SOURCES ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Evidence &amp; Sources</span></div>
+
+    <div class="quotes-grid">
+
+      <div class="quote-card quote-card--blue quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">$12M at Age 17</span></div>
+        <p class="quote-text">"A bidding war for the nation's top-ranked high school quarterback ended with the University of Michigan outracing LSU, reportedly <strong>paying up to $12 million over four years, for 17-year-old Bryce Underwood's services...</strong> Larry Ellison, the founder of Oracle and the third richest man in the world, [helped] pitch in."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Volt<span>The NIL Top 10: Who Are the Highest-Paid College Athletes? · February 2026</span></div>
+          <a href="https://voltedu.com/features/marketing-branding/the-nil-top-10-who-are-the-highest-paid-college-athletes/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">9-Year-Old, Six Figures</span></div>
+        <p class="quote-text">"Ghalee Wadood Jr., a <strong>9-year-old from Los Angeles, signed an NIL deal worth 6 figures</strong> with sports agency Family 4 Life after his first year of contact football" — and "Ghalee Wadood Jr. had to ask what a sports agency was in the first place."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
+          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Baby Gronk, Age 8</span></div>
+        <p class="quote-text">"<strong>Baby Gronk San Miguel has an NIL valuation of $115,000 while being only eight years old.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
+          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Age 6 — The Floor</span></div>
+        <p class="quote-text">"One of the youngest athletes to sign an NIL deal... [is] <strong>golfing phenom Patton Green who was six</strong>" at the time of signing.</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
+          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">"The Wild West" — NPR</span></div>
+        <p class="quote-text">"<strong>'Now it's the wild, wild west'</strong> — Marvin Wilson, Wisdom Foundation &nbsp;|&nbsp; <strong>'Right now, we're seeing kids getting six-figure deals in 9th, 10th grade.'</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">NPR<span>Non-Profit Teaches High School Athletes to Navigate NIL Contracts · April 2026</span></div>
+          <a href="https://www.npr.org/2026/04/28/nx-s1-5786306/non-profit-teaches-high-school-athletes-how-to-navigate-nil-contracts" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">NC: One HS Athlete, $1M+</span></div>
+        <p class="quote-text">"Last school year, only 12 North Carolina high school students signed NIL deals. Most were around $10,000, but <strong>one student athlete signed a deal for more than $1 million.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">NPR<span>Non-Profit Teaches High School Athletes to Navigate NIL Contracts · April 2026</span></div>
+          <a href="https://www.npr.org/2026/04/28/nx-s1-5786306/non-profit-teaches-high-school-athletes-how-to-navigate-nil-contracts" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Nike Picks a 13-Year-Old</span></div>
+        <p class="quote-text">"At 13 years old, McKenna 'Mak' Whitham made history as <strong>the youngest athlete across all sports to sign a NIL deal with Nike.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Business of College Sports<span>Nike's NIL Deals: Full List · December 2024</span></div>
+          <a href="https://businessofcollegesports.com/name-image-likeness/nikes-nil-deals-full-list-of-nike-high-school-and-college-athletes/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">HS Valuations in the Millions</span></div>
+        <p class="quote-text">"Three high school stars are at the top of On3.com's NIL valuations... <strong>Bronny James tops the list with a valuation of $7.5 million... Mikey Williams... has a valuation of $3.6 million. Manning... is at $3.4 million.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">CBS News<span>High School Athletes &amp; NIL Deals · December 2022</span></div>
+          <a href="https://www.cbsnews.com/news/high-school-athletes-nil-deals-name-image-likeness-six-figures/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Market Explosion</span></div>
+        <p class="quote-text">"Since July 1, 2021, the total projected NIL market has <strong>exploded from $917 million in 2021–22 to an expected $1.67 billion in 2024–25</strong> – with no signs of slowing down." Early projections point to the total NIL market <strong>exceeding $2.5 billion in the first year of revenue sharing.</strong></p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Opendorse, "NIL at 3" — the industry-standard annual report<span>CalMatters / Opendorse · February 2025</span></div>
+          <a href="https://calmatters.org/wp-content/uploads/2025/02/The_Annual_Opendorse_Report_-Version-2.pdf" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Reaching HS Sophomores</span></div>
+        <p class="quote-text">"NIL is a <strong>$2.6 billion industry in 2026.</strong> Most of that money goes to football and men's basketball at Power 4 schools. But <strong>the offers are reaching high school sophomores now.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">DraftWorth<span>NIL Market Report 2025 · March 2026</span></div>
+          <a href="https://draftworth.com/nil-market-report-2025" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">45 States, Floodgates Open</span></div>
+        <p class="quote-text">"By late 2025, updated state-by-state trackers from NIL platforms and legal guides indicate that <strong>45 states, plus Washington, D.C., will allow some form of NIL for high school athletes.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">2aDays<span>Which High School Athletes Can Get NIL Deals in 2025? · December 2025</span></div>
+          <a href="https://www.2adays.com/blog/which-high-school-athletes-can-get-nil-deals-in-2025/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Legal Frontier</span></div>
+        <p class="quote-text">"When <strong>minors are signing deals worth thousands — or even millions — of dollars, serious legal questions follow.</strong> Who controls the money? Are the contracts enforceable? What if a brand exploits the athlete?"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Elevate Legal Services<span>NIL Contracts for High School Athletes · July 2025</span></div>
+          <a href="https://elawfirm.org/blog/nil-contracts-for-high-school-athletes/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--blue fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Brand Milestones</span></div>
+        <p class="quote-text">"<strong>Life Center Academy basketball prospect Kiyomi McMiller signed Nike label Jordan Brand's first high-school NIL deal</strong> in February 2023... In January 2025, <strong>Adidas signed Ethan Holliday</strong>, the company's first such deal with a baseball player."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Wikipedia, Student Athlete Compensation<span>Jordan Brand (Feb 2023) · Adidas (Jan 2025)</span></div>
+          <a href="https://en.wikipedia.org/wiki/Student_athlete_compensation" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Youth Sports in America — Data Research</div>
+    <p class="footer-note">All statistics, quotes, and claims are directly attributed to the original source with a live hyperlink. No data has been extrapolated, interpolated, or invented. Sources include the Aspen Institute / Project Play, Opendorse, Pew Research Center, NPR, CBS News, Kiplinger, and others cited inline. Compiled June 2026.</p>
+    <div class="footer-date">Updated June 2026</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
