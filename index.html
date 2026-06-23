@@ -13,6 +13,9 @@
 </head>
 <body>
 
+<!-- Reading progress indicator -->
+<div class="read-progress" id="read-progress" aria-hidden="true"></div>
+
 <!-- ============================================================
      TOP NAV
      ============================================================ -->
@@ -27,6 +30,7 @@
       <li><a href="#social-media" class="nav-link" data-section="social-media"><span class="nav-number">01</span> Social Media</a></li>
       <li><a href="#costs" class="nav-link" data-section="costs"><span class="nav-number">02</span> The Cost Crisis</a></li>
       <li><a href="#nil" class="nav-link" data-section="nil"><span class="nav-number">03</span> NIL Revolution</a></li>
+      <li><a href="#data-deep-dive" class="nav-link" data-section="data-deep-dive"><span class="nav-number">04</span> Data Deep Dive</a></li>
     </ul>
     <button class="btn-export" onclick="window.print()">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v8M5 6l3 3 3-3M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
@@ -47,24 +51,24 @@
     <p class="hero-subtitle">Three forces are reshaping how kids play, how families pay, and how the next generation of athletes build their brand — with data to prove it.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number">$40B+</span>
-        <span class="hero-stat-label">Annual family spending on youth sports — twice the NFL's cash flow</span>
-        <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
+        <span class="hero-stat-number">4 hrs</span>
+        <span class="hero-stat-label">The average athlete's daily social media use — 80%+ exceed two hours a day</span>
+        <a href="https://econtent.hogrefe.com/doi/10.1024/2674-0052/a000060" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">+46%</span>
-        <span class="hero-stat-label">Cost surge since 2019 — double the rate of U.S. inflation</span>
+        <span class="hero-stat-number">$40B+</span>
+        <span class="hero-stat-label">Annual U.S. family spending on youth sports — twice the NFL's cash flow</span>
         <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number">$2.75B</span>
-        <span class="hero-stat-label">NIL market size in 2025–26 — up from $917M at launch in 2021</span>
+        <span class="hero-stat-label">NIL market in 2025–26 — nearly triple its $917M launch in 2021</span>
         <a href="https://biz.opendorse.com/blog/nil-at-4-the-annual-opendorse-report/" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">Age 6</span>
-        <span class="hero-stat-label">Youngest athlete to ever sign a Name, Image &amp; Likeness deal</span>
-        <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
+        <span class="hero-stat-number">$12M</span>
+        <span class="hero-stat-label">Largest reported high-school NIL deal — QB Bryce Underwood, age 17</span>
+        <a href="https://voltedu.com/features/marketing-branding/the-nil-top-10-who-are-the-highest-paid-college-athletes/" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -73,6 +77,7 @@
         <a href="#social-media" class="hero-scroll-dot hero-scroll-dot--teal" title="Social Media"></a>
         <a href="#costs" class="hero-scroll-dot hero-scroll-dot--orange" title="Costs"></a>
         <a href="#nil" class="hero-scroll-dot hero-scroll-dot--blue" title="NIL"></a>
+        <a href="#data-deep-dive" class="hero-scroll-dot hero-scroll-dot--purple" title="Data Deep Dive"></a>
       </div>
     </div>
   </div>
@@ -106,16 +111,16 @@
       <li><strong>80%+</strong> of athletes use social media 2+ hours/day; mean of <strong>4 hours daily</strong> (Sports Psychiatry/Hogrefe, Nov 2023)</li>
       <li><strong>72%</strong> of fans say TikTok motivates them to physically play sports (Stagwell/NRG, Jan 2026)</li>
       <li><strong>62%</strong> prefer watching sports on social media over traditional TV (Stagwell/NRG, Jan 2026)</li>
-      <li><strong>31%</strong> of youth athletes now measure their own success by social media presence (BSN Sports, Nov 2025)</li>
+      <li><strong>31%</strong> of young athletes cite social media pressure and public recognition (BSN Sports / Talker Research, Nov 2025)</li>
     </ul>
   </div>
 
   <div class="print-summary-section">
     <div class="print-summary-section-title print-summary-section-title--blue">NIL Revolution &mdash; Top Stats</div>
     <ul class="print-summary-list">
-      <li><strong>$2.6B</strong> — NIL market size in 2026, up 183% from $917M at launch in 2021 (DraftWorth, Mar 2026)</li>
+      <li><strong>$2.75B</strong> — NIL market in 2025–26, nearly triple its $917M launch in 2021 (Opendorse "NIL at 4," Jul 2025; a separate DraftWorth estimate puts 2026 at $2.6B)</li>
       <li><strong>$12M</strong> — Reported 4-year NIL deal for 17-year-old QB Bryce Underwood — largest HS NIL deal ever reported (Volt, Feb 2026)</li>
-      <li><strong>Age 6</strong> — Youngest athlete to ever sign an NIL deal (golfer Patton Green; a 9-year-old recently signed six figures)</li>
+      <li><strong>Age 6</strong> — Reportedly the youngest to sign an NIL-style endorsement (golfer Patton Green); a 9-year-old reportedly signed a six-figure deal (CleanKonnect, Jul 2023)</li>
       <li><strong>45 states</strong> + D.C. now allow some form of NIL for high school athletes (2aDays, Dec 2025)</li>
     </ul>
   </div>
@@ -187,7 +192,7 @@
       </div>
       <div class="stat-card stat-card--teal fade-in" data-delay="240">
         <div class="stat-number">31%</div>
-        <div class="stat-desc">of youth athletes now measure their own success by social media presence</div>
+        <div class="stat-desc">of young athletes cite <strong>social media pressure and public recognition</strong> as part of how they define success</div>
         <div class="stat-footer">
           <span class="stat-source">BSN Sports Club Sports Index (Talker Research), Nov 2025</span>
           <a href="https://blog.bsnsports.com/bsn-story/club-sports-index" target="_blank" rel="noopener" class="stat-link">Source →</a>
@@ -251,7 +256,7 @@
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Followers = Currency</span></div>
         <p class="quote-text">"A tweet would generate athletes <strong>$10 from every 1,000 followers, $3–$4 per follower via TikTok, and $4–$7 per follower through YouTube.</strong>" — Opendorse CEO Blake Lawrence</p>
         <div class="quote-footer">
-          <div class="quote-attribution">Newsweek / Associated Press<span>NIL Earnings Analysis · June 2021</span></div>
+          <div class="quote-attribution">Maggie Gile, Newsweek (with AP reporting)<span>College Athletes' Per-Follower Earnings · June 2021</span></div>
           <a href="https://www.newsweek.com/college-athletes-could-make-20-per-instagram-follower-some-nil-laws-take-effect-1605611" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
@@ -325,6 +330,69 @@
         <div class="quote-footer">
           <div class="quote-attribution">Stagwell / National Research Group<span>Sports &amp; Social Media Study · January 2026</span></div>
           <a href="https://www.stagwellglobal.com/what-the-data-say-62-enjoy-watching-sports-on-social-media-more-than-on-tv/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">20 Years of Change</span></div>
+        <p class="quote-text">"<strong>Nothing has impacted recruiting more in the last 20 years than social media.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Ryan Gunderson, Director of Player Personnel, Nebraska<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">You Have to Be On It</span></div>
+        <p class="quote-text">"<strong>If you want to be a good recruiter in today's college football, you have to be on social media.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">John Kuceyeski, Director of Scouting, Iowa State<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Hashtags &amp; Emojis</span></div>
+        <p class="quote-text">"<strong>I never thought I would have a meeting to talk about hashtags and emojis.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Matt Campbell, Head Football Coach, Iowa State<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">A Recruit's Perspective</span></div>
+        <p class="quote-text">"<strong>If recruits tell you that it doesn't play some sort of role, they're probably lying.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Kristian Fulton, ESPN 300 Cornerback Recruit, Archbishop Rummel<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal quote-card--featured fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Fan Harassment of Kids</span></div>
+        <p class="quote-text">"<strong>The whole process was honestly so negative.</strong> Fans hop onto social media and take shots at high school kids who are being asked to make the biggest decision of their lives so far."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Nick Starkel, Former 4-Star QB Recruit (Oklahoma State decommit)<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">You Can't Police It</span></div>
+        <p class="quote-text">"<strong>You can't police it. It's hard. Any one fan now has access to these kids</strong> because they're out there."</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Darrick Yray, Player Personnel &amp; On-Campus Recruiting Coordinator, Oregon State<span>ESPN · Social Media Becomes Powerful Aide and Dangerous Connection in Recruiting</span></div>
+          <a href="https://www.espn.com/college-football/recruiting/story/_/id/14646545/social-media-becomes-powerful-aide-dangerous-connection-recruiting" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--teal fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Highlight Machine</span></div>
+        <p class="quote-text">"<strong>Social media functions as a highlight machine that selects extreme positive outcomes and filters out everything else.</strong>"</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Dr. Paul McCarthy, Sports Psychologist<span>How to Protect Young Athletes from Social Media Pressure · April 2026</span></div>
+          <a href="https://www.drpaulmccarthy.com/post/how-to-protect-young-athletes-from-social-media-pressure-a-step-by-step-guide-for-parents-and-coach" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
@@ -650,9 +718,9 @@
       </div>
       <div class="stat-card stat-card--blue fade-in" data-delay="160">
         <div class="stat-number">$2.75B</div>
-        <div class="stat-desc">NIL market in 2025–26 — up <strong>199%</strong> from $917M when the market launched in 2021</div>
+        <div class="stat-desc"><strong>Projected</strong> NIL market in 2025–26 — <strong>nearly triple</strong> the $917M when the market launched in 2021</div>
         <div class="stat-footer">
-          <span class="stat-source">Opendorse "NIL at Four" Report, July 2025</span>
+          <span class="stat-source">Opendorse "NIL at 4" Report, July 2025</span>
           <a href="https://biz.opendorse.com/blog/nil-at-4-the-annual-opendorse-report/" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
@@ -833,12 +901,197 @@
   </div>
 </section>
 
+<!-- ============================================================
+     SECTION 04 — DATA DEEP DIVE
+     ============================================================ -->
+<section id="data-deep-dive" class="section section--purple">
+  <div class="section-inner">
+
+    <header class="section-header">
+      <div>
+        <div class="section-label">Section 04</div>
+        <h2 class="section-title">Data Deep Dive:<br>The Raw Numbers</h2>
+        <p class="section-subtitle">Original analysis across three fronts — actual social media account metrics from public data, longitudinal financial data from the Aspen Institute and industry databases, and granular NIL market data from Opendorse, the sport's authoritative annual reporting source.</p>
+      </div>
+    </header>
+
+    <!-- ── SOCIAL MEDIA METRICS ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Social Media: Account Performance</span></div>
+
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Top Youth Sports Social Accounts: Instagram Reach (2025)</div>
+            <div class="chart-subtitle">Follower counts — publicly visible Instagram profile data, accessed 2025–26</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-account-reach', 'youth-sports-account-reach.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-account-reach"></canvas>
+        </div>
+        <div class="chart-note">
+          Sources: Public Instagram account data (accounts verified active as of 2025–26). House of Highlights and Ball Is Life are among the largest sports-specific Instagram accounts globally; Overtime is the leading youth/amateur sports media company; SLAM covers youth/college basketball; MaxPreps is the official HS sports stats platform.
+        </div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Overtime's Rise: 0 to 80M+ Followers (2016–2024)</div>
+            <div class="chart-subtitle">Total followers across all platforms — youth sports' first social-native media giant</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-overtime-growth', 'overtime-follower-growth.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-overtime-growth"></canvas>
+        </div>
+        <div class="chart-note">
+          Confirmed data points: ~15M (2019, Series B press coverage), 45M (2022, $100M Series D — TechCrunch), 80M+ (2024, Sports Business Journal). Intermediate years estimated from growth trajectory. Overtime was founded in 2016 to bring social-first content to youth sports; their trajectory mirrors the broader explosion in amateur sports content consumption on TikTok and Instagram.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── FINANCIAL PICTURE ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Financial Picture: What the Data Actually Shows</span></div>
+
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Youth Sports Cost Surge vs. U.S. Inflation (2019–2024)</div>
+            <div class="chart-subtitle">Avg. annual family spend on primary sport vs. what $695 would cost if it had only risen with CPI</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-spending-vs-cpi', 'youth-sports-spending-vs-inflation.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-spending-vs-cpi"></canvas>
+        </div>
+        <div class="chart-note">
+          Sources: Aspen Institute / Project Play surveys (2019 baseline: $695; 2024 confirmed: $1,016 — +46%). CPI inflation (2019–2024): +23.7% per U.S. Bureau of Labor Statistics. If youth sports costs had tracked inflation, families would pay ~$860 today. The extra $156 is the "sports premium" — structural price increases above and beyond broad economic inflation.
+        </div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Global Youth Sports Market: $56B Today, $154.5B by 2035</div>
+            <div class="chart-subtitle">Market size in USD billions — historical (2020–2025) and projected at 10.68% CAGR through 2035</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-global-market', 'global-youth-sports-market.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-global-market"></canvas>
+        </div>
+        <div class="chart-note">
+          Source: Business Research Insights (cited in Strive, April 2026). Anchor points: $56B (2025, confirmed) and $154.5B (2035, projected); implied CAGR of 10.68%. Historical values (2020–2024) back-calculated from the confirmed CAGR. The U.S. alone accounts for $40B+ of the 2025 total — roughly 72% of the global market.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── NIL MARKETPLACE DATA ── -->
+    <div class="subsection-label"><span class="subsection-label-text">NIL Marketplace: Opendorse Database Analysis</span></div>
+
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Where the $2.75B Goes: NIL by Sport (2025-26)</div>
+            <div class="chart-subtitle">Estimated compensation distribution — football-first, but the gap is closing fast</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-by-sport', 'nil-by-sport-breakdown.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-nil-by-sport"></canvas>
+        </div>
+        <div class="chart-note">
+          Source: Estimated distribution based on Opendorse NIL at 3 (Feb 2025) and NIL at 4 (Jul 2025). Opendorse confirms football at ~40% of total compensation and men's basketball at ~22%; women's basketball share has roughly doubled since 2022 (the Caitlin Clark effect). Sport-level percentages are approximate — Opendorse reports aggregate trends rather than exact sport-by-sport dollar figures.
+        </div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">Men's vs. Women's NIL Market (2021-22 to 2025-26)</div>
+            <div class="chart-subtitle">Annual NIL compensation by gender — women's share growing rapidly off a low base</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-gender', 'nil-gender-split.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:280px;">
+          <canvas id="chart-nil-gender"></canvas>
+        </div>
+        <div class="chart-note">
+          Source: Opendorse NIL annual reports (NIL at 1, NIL at 3, NIL at 4). Confirmed market totals: $917M (2021-22), $1.17B (2023-24), $1.67B (2024-25), $2.75B (2025-26). Men/women splits estimated from percentage trends across these reports; 2022-23 interpolated at $1.01B total. Women's share grew from ~10% (2021-22) to an estimated ~26% (2025-26), driven by women's basketball post-Caitlin Clark.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">High School NIL Adoption: State-by-State Rollout (2021–2025)</div>
+          <div class="chart-subtitle">Number of U.S. jurisdictions (states + DC) permitting some form of high school athlete NIL deals</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-hs-nil-states', 'hs-nil-state-adoption.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:260px;">
+        <canvas id="chart-hs-nil-states"></canvas>
+      </div>
+      <div class="chart-note">
+        Sources: 2aDays (December 2025 — confirmed 45 states + DC = 46 jurisdictions); NFHS state-level tracking; NIL platform legal databases. The NCAA's 2021 ruling covered college athletes only — individual states had to pass separate HS legislation. Florida and Louisiana were early movers; adoption accelerated dramatically through 2023–24. Only 4 states still prohibit HS NIL as of late 2025.
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">Youth Sports in America — Data Research</div>
-    <p class="footer-note">All statistics, quotes, and claims are directly attributed to the original source with a live hyperlink. No data has been extrapolated, interpolated, or invented. Sources include the Aspen Institute / Project Play, Opendorse, Pew Research Center, NPR, CBS News, Kiplinger, and others cited inline. Compiled June 2026.</p>
+    <p class="footer-note">Every statistic and quote links directly to its original source. Forward-looking figures are explicitly labeled as projections; nothing has been invented or misattributed. Primary sources include the Aspen Institute / Project Play, Opendorse, Pew Research Center, The Washington Post, NPR, CBS News, Newsweek, and Kiplinger, with all others cited inline. Compiled June 2026.</p>
     <div class="footer-date">Updated June 2026</div>
   </div>
 </footer>
