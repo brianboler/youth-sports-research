@@ -940,11 +940,40 @@ img, svg { display: block; }
 }
 
 /* ============================================================
+   PRINT-ONLY SUMMARY (hidden in browser)
+   ============================================================ */
+
+.print-summary { display: none; }
+
+/* ============================================================
    PRINT STYLES
    ============================================================ */
 
 @media print {
-  * {
+  /* Override all CSS variables — all var() refs now render dark-on-white */
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f7f7f7;
+    --surface: #f3f3f3;
+    --surface-hover: #ebebeb;
+    --border: #cccccc;
+    --border-light: #bbbbbb;
+    --teal: #007a6a;
+    --teal-dim: #dff2ef;
+    --teal-mid: #aaddd6;
+    --orange: #b84010;
+    --orange-dim: #fdeae0;
+    --orange-mid: #f6b899;
+    --blue: #1a6fbf;
+    --blue-dim: #e2eef9;
+    --blue-mid: #a8c8ef;
+    --text: #111111;
+    --text-secondary: #333333;
+    --text-muted: #555555;
+    --text-faint: #777777;
+  }
+
+  *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
@@ -953,66 +982,189 @@ img, svg { display: block; }
   body {
     background: #ffffff !important;
     color: #111111 !important;
+    font-size: 10pt;
   }
 
+  /* ── Hide interactive / decorative / chart elements ── */
   .top-nav,
   .btn-export,
   .btn-download,
   .chart-actions,
   .hero-scroll,
   .hero-bg,
-  .hero-grid {
+  .hero-grid,
+  .chart-block,
+  .subsection-label,
+  .divider {
     display: none !important;
   }
 
+  /* ── Show print-only summary ── */
+  .print-summary { display: block !important; }
+
+  /* ── Ensure scroll-animated elements are visible ── */
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* ── Hero: compact ── */
   .hero {
     min-height: auto;
-    padding: 48px 32px;
-    page-break-after: always;
+    padding: 20px 24px 14px;
+    background: #ffffff !important;
   }
 
-  .hero-title,
-  .section-title {
-    color: #111111 !important;
+  .hero-eyebrow { margin-bottom: 6px; }
+  .hero-title { font-size: 26pt; margin-bottom: 8px; }
+  .hero-title span { color: #666666 !important; }
+  .hero-subtitle { font-size: 9.5pt; max-width: 100%; margin-bottom: 0; color: #333333 !important; }
+  .hero-stats { display: none !important; }
+
+  /* ── Sections: compact, no forced page breaks ── */
+  .section {
+    padding: 14px 24px;
+    border-color: #cccccc !important;
+    page-break-before: auto;
   }
 
-  .hero-subtitle,
-  .section-subtitle,
-  .quote-text,
-  .stat-desc {
-    color: #444444 !important;
+  .section-header { margin-bottom: 12px; }
+  .section-title { font-size: 16pt; color: #111111 !important; margin-bottom: 4px; }
+  .section-subtitle { font-size: 9pt; color: #444444 !important; max-width: 100%; }
+
+  /* ── Stat grid: 4-up, compact ── */
+  .stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    margin-bottom: 12px;
   }
 
-  .hero-stats {
-    background: #f5f5f5 !important;
-    border-color: #dddddd !important;
+  .stat-card {
+    padding: 10px 11px;
+    gap: 5px;
+    break-inside: avoid;
+    background: #f3f3f3 !important;
+    border-color: #cccccc !important;
   }
 
-  .hero-stat {
-    background: #f5f5f5 !important;
+  .stat-number { font-size: 20pt; }
+  .stat-desc { font-size: 8pt; color: #333333 !important; }
+  .stat-source { font-size: 7pt; color: #666666 !important; }
+
+  /* ── Quotes grid: 2-up, compact ── */
+  .quotes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    margin-top: 0;
   }
 
-  .stat-card,
-  .quote-card,
-  .chart-block {
-    background: #f8f8f8 !important;
-    border-color: #dddddd !important;
+  .quote-card {
+    padding: 9px 11px;
+    gap: 7px;
+    break-inside: avoid;
+    background: #f3f3f3 !important;
+    border-color: #cccccc !important;
+  }
+
+  .quote-card--featured { background: #f7f7f7 !important; }
+
+  .quote-text { font-size: 8pt; color: #333333 !important; line-height: 1.5; }
+  .quote-text strong { color: #111111 !important; }
+  .quote-tag { font-size: 7pt; }
+
+  .quote-footer { border-color: #cccccc !important; padding-top: 5px; }
+  .quote-attribution { font-size: 7pt; color: #555555 !important; }
+  .quote-attribution span { color: #777777 !important; }
+  .quote-link { display: none !important; }
+
+  .footer {
+    background: #f0f0f0 !important;
+    border-color: #cccccc !important;
+    padding: 14px 24px;
+  }
+
+  .footer-note, .footer-brand, .footer-date { color: #555555 !important; }
+
+  canvas { max-width: 100% !important; }
+
+  /* ── Print summary card ── */
+  .print-summary {
+    padding: 14px 20px;
+    border: 2px solid #111111;
+    margin: 0 24px 16px;
+    background: #f9f9f9 !important;
+    break-after: avoid;
+  }
+
+  .print-summary-title {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1.5px solid #111111;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+  }
+
+  .print-summary-section { margin-bottom: 10px; }
+
+  .print-summary-section-title {
+    font-size: 7.5pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #555555;
+    margin-bottom: 4px;
+  }
+
+  .print-summary-section-title--teal   { color: #007a6a; }
+  .print-summary-section-title--orange { color: #b84010; }
+  .print-summary-section-title--blue   { color: #1a6fbf; }
+
+  .print-summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 18px;
+  }
+
+  .print-summary-list li {
+    font-size: 8pt;
+    color: #222222;
+    padding: 2px 0 2px 7px;
+    border-left: 2px solid #cccccc;
+    line-height: 1.4;
+  }
+
+  .print-summary-quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+
+  .print-summary-quote {
+    background: #ffffff !important;
+    border-left: 3px solid #333333;
+    padding: 6px 9px;
     break-inside: avoid;
   }
 
-  .section {
-    page-break-before: always;
-    border-color: #dddddd !important;
+  .print-summary-quote p {
+    font-size: 8pt;
+    color: #333333;
+    font-style: italic;
+    margin-bottom: 3px;
+    line-height: 1.45;
   }
 
-  .quote-text { color: #333333 !important; }
-  .quote-attribution { color: #666666 !important; }
-  .stat-source { color: #888888 !important; }
-  .chart-note { color: #888888 !important; border-color: #dddddd !important; }
-  .footer { background: #f0f0f0 !important; border-color: #dddddd !important; }
-  .footer-note, .footer-brand, .footer-date { color: #666666 !important; }
-
-  .chart-note { color: #888888 !important; }
-
-  canvas { max-width: 100% !important; }
+  .print-summary-quote span {
+    font-size: 7pt;
+    color: #666666;
+    font-weight: 600;
+    font-style: normal;
+  }
 }
