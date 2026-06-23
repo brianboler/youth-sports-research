@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Youth Sports in America — Data Research Compendium</title>
-  <meta name="description" content="A data-driven research compendium on the transformation of youth sports: social media culture, the cost crisis, and the NIL revolution." />
+  <meta name="description" content="A data research compendium on three trends in youth sports: social media use, family spending, and name, image, and likeness (NIL) deals." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -26,15 +26,20 @@
       <span class="nav-brand-tag">Data Research · 2024–2026</span>
     </div>
     <div class="nav-divider"></div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#social-media" class="nav-link" data-section="social-media"><span class="nav-number">01</span> Social Media</a></li>
-      <li><a href="#costs" class="nav-link" data-section="costs"><span class="nav-number">02</span> The Cost Crisis</a></li>
-      <li><a href="#nil" class="nav-link" data-section="nil"><span class="nav-number">03</span> NIL Revolution</a></li>
+      <li><a href="#costs" class="nav-link" data-section="costs"><span class="nav-number">02</span> Family Costs</a></li>
+      <li><a href="#nil" class="nav-link" data-section="nil"><span class="nav-number">03</span> NIL Deals</a></li>
       <li><a href="#data-deep-dive" class="nav-link" data-section="data-deep-dive"><span class="nav-number">04</span> Data Deep Dive</a></li>
     </ul>
     <button class="btn-export" onclick="window.print()">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v8M5 6l3 3 3-3M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
-      Export PDF
+      <span class="btn-export-text">Export PDF</span>
+    </button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
     </button>
   </div>
 </nav>
@@ -48,7 +53,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Research Compendium · All Data Sourced &amp; Attributed</div>
     <h1 class="hero-title">Youth Sports<br><span>in America</span></h1>
-    <p class="hero-subtitle">Three forces are reshaping how kids play, how families pay, and how the next generation of athletes build their brand — with data to prove it.</p>
+    <p class="hero-subtitle">Data on three trends in youth athletics: social media use, family spending, and name, image, and likeness (NIL) compensation.</p>
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="hero-stat-number">4 hrs</span>
@@ -66,9 +71,9 @@
         <a href="https://biz.opendorse.com/blog/nil-at-4-the-annual-opendorse-report/" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">$12M</span>
-        <span class="hero-stat-label">Largest reported high-school NIL deal — QB Bryce Underwood, age 17</span>
-        <a href="https://voltedu.com/features/marketing-branding/the-nil-top-10-who-are-the-highest-paid-college-athletes/" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
+        <span class="hero-stat-number">$10–12M</span>
+        <span class="hero-stat-label">Reported deal for 17-year-old QB Bryce Underwood — the richest recruiting flip in college football history</span>
+        <a href="https://fortune.com/2025/08/28/larry-ellison-bryce-underwood-michigan-recruiting-jolin-tom-brady-dave-portnoy/" target="_blank" rel="noopener" class="hero-stat-link">Source →</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -89,13 +94,13 @@
      PRINT-ONLY QUICK REFERENCE (hidden in browser)
      ============================================================ -->
 <div class="print-summary" id="print-summary">
-  <div class="print-summary-title">Quick Reference — Best Stats &amp; Quotes for Article Use</div>
+  <div class="print-summary-title">Quick Reference — Key Statistics &amp; Quotes</div>
 
   <div class="print-summary-section">
-    <div class="print-summary-section-title print-summary-section-title--orange">The Cost Crisis &mdash; Top Stats</div>
+    <div class="print-summary-section-title print-summary-section-title--orange">Family Costs &mdash; Key Statistics</div>
     <ul class="print-summary-list">
       <li><strong>$40B+</strong> — U.S. family spending on youth sports annually; <em>twice the cash flow of the NFL</em> (Aspen Institute, Feb 2025)</li>
-      <li><strong>+46%</strong> — Cost surge since 2019; average family spends $1,016 on a child's primary sport — double U.S. inflation (Aspen Institute, Feb 2025)</li>
+      <li><strong>+46%</strong> — Cost increase since 2019; average family spends $1,016 on a child's primary sport — double U.S. inflation (Aspen Institute, Feb 2025)</li>
       <li><strong>+105%</strong> — Basketball cost increase in 5 years; soccer +69%, baseball +68% (Aspen Institute, Feb 2025)</li>
       <li><strong>$25,000</strong> — High end of annual family spending reported in the 2024 Aspen survey</li>
       <li><strong>75%</strong> of parents considered pulling kids from sports; <strong>1 in 5</strong> took on debt (Good Sports/Harris Poll)</li>
@@ -106,27 +111,27 @@
   </div>
 
   <div class="print-summary-section">
-    <div class="print-summary-section-title print-summary-section-title--teal">Social Media &mdash; Top Stats</div>
+    <div class="print-summary-section-title print-summary-section-title--teal">Social Media &mdash; Key Statistics</div>
     <ul class="print-summary-list">
       <li><strong>80%+</strong> of athletes use social media 2+ hours/day; mean of <strong>4 hours daily</strong> (Sports Psychiatry/Hogrefe, Nov 2023)</li>
       <li><strong>72%</strong> of fans say TikTok motivates them to physically play sports (Stagwell/NRG, Jan 2026)</li>
       <li><strong>62%</strong> prefer watching sports on social media over traditional TV (Stagwell/NRG, Jan 2026)</li>
-      <li><strong>31%</strong> of young athletes cite social media pressure and public recognition (BSN Sports / Talker Research, Nov 2025)</li>
+      <li><strong>31%</strong> of those surveyed cite social media pressure and public recognition as a measure of success (BSN Sports / Talker Research, 2025)</li>
     </ul>
   </div>
 
   <div class="print-summary-section">
-    <div class="print-summary-section-title print-summary-section-title--blue">NIL Revolution &mdash; Top Stats</div>
+    <div class="print-summary-section-title print-summary-section-title--blue">NIL Deals &mdash; Key Statistics</div>
     <ul class="print-summary-list">
       <li><strong>$2.75B</strong> — NIL market in 2025–26, nearly triple its $917M launch in 2021 (Opendorse "NIL at 4," Jul 2025; a separate DraftWorth estimate puts 2026 at $2.6B)</li>
-      <li><strong>$12M</strong> — Reported 4-year NIL deal for 17-year-old QB Bryce Underwood — largest HS NIL deal ever reported (Volt, Feb 2026)</li>
-      <li><strong>Age 6</strong> — Reportedly the youngest to sign an NIL-style endorsement (golfer Patton Green); a 9-year-old reportedly signed a six-figure deal (CleanKonnect, Jul 2023)</li>
+      <li><strong>$10–12M</strong> — Reported 4-year deal for 17-year-old QB Bryce Underwood to flip from LSU to Michigan — the richest recruiting flip in college football history (Fortune / Front Office Sports, 2025)</li>
+      <li><strong>Age 13</strong> — McKenna "Mak" Whitham, the youngest athlete in any sport signed by Nike to an NIL deal (ESPN, 2024); a 9-year-old in Snoop Dogg's youth league reportedly signed a six-figure deal (KTLA, Jul 2023)</li>
       <li><strong>45 states</strong> + D.C. now allow some form of NIL for high school athletes (2aDays, Dec 2025)</li>
     </ul>
   </div>
 
   <div class="print-summary-section">
-    <div class="print-summary-section-title">Top Quotes — Ready to Drop In</div>
+    <div class="print-summary-section-title">Key Quotes</div>
     <div class="print-summary-quotes">
       <div class="print-summary-quote">
         <p>"<strong>The $40 billion now spent by families on youth sports is twice the amount of cash flowing through the NFL,</strong> the most lucrative sports league in the world."</p>
@@ -158,7 +163,7 @@
       <div>
         <div class="section-label">Section 01</div>
         <h2 class="section-title">Social Media &amp;<br>Youth Sports Culture</h2>
-        <p class="section-subtitle">From highlight reels to recruiting pipelines — how Instagram and TikTok have rewired the youth athletics ecosystem, turned follower counts into currency, and created a generation of athlete-creators.</p>
+        <p class="section-subtitle">How Instagram and TikTok intersect with youth athletics: recruiting, athlete audience-building, and the link between follower counts and earnings.</p>
       </div>
     </header>
 
@@ -192,7 +197,7 @@
       </div>
       <div class="stat-card stat-card--teal fade-in" data-delay="240">
         <div class="stat-number">31%</div>
-        <div class="stat-desc">of young athletes cite <strong>social media pressure and public recognition</strong> as part of how they define success</div>
+        <div class="stat-desc">of those surveyed cite <strong>social media pressure and public recognition</strong> as part of how they define success in youth sports</div>
         <div class="stat-footer">
           <span class="stat-source">BSN Sports Club Sports Index (Talker Research), Nov 2025</span>
           <a href="https://blog.bsnsports.com/bsn-story/club-sports-index" target="_blank" rel="noopener" class="stat-link">Source →</a>
@@ -207,8 +212,8 @@
     <div class="chart-block fade-in">
       <div class="chart-block-header">
         <div>
-          <div class="chart-title">Social Media's Grip on Youth Sports</div>
-          <div class="chart-subtitle">Key behavioral metrics — ordered by magnitude (% of respondents)</div>
+          <div class="chart-title">Social Media Use Among Youth Athletes</div>
+          <div class="chart-subtitle">Key behavioral metrics, ordered by magnitude (% of respondents)</div>
         </div>
         <div class="chart-actions">
           <button class="btn-download" onclick="downloadChart('chart-social', 'social-media-youth-sports-stats.png')">
@@ -229,8 +234,8 @@
     <div class="chart-block fade-in">
       <div class="chart-block-header">
         <div>
-          <div class="chart-title">The Athlete Creator Economy: Year-Over-Year Explosion (2016–2026)</div>
-          <div class="chart-subtitle">Global influencer marketing industry size — the ecosystem that turned athletes into media companies and follower counts into dollar signs</div>
+          <div class="chart-title">Influencer Marketing Industry Size (2016–2026)</div>
+          <div class="chart-subtitle">Global influencer marketing industry size (USD billions)</div>
         </div>
         <div class="chart-actions">
           <button class="btn-download" onclick="downloadChart('chart-creator-economy', 'athlete-creator-economy-growth.png')">
@@ -243,7 +248,7 @@
         <canvas id="chart-creator-economy"></canvas>
       </div>
       <div class="chart-note">
-        Sources: Influencer Marketing Hub Benchmark Reports (2016–2025 confirmed actual data); 2026 figure projected by multiple industry analysts. $1.7B (2016) → $32.55B (2025) → ~$40B projected (2026) — a 19× expansion in a decade. COVID accelerated the market 49% in 2020 alone as screen time surged. Athletes are the fastest-growing creator segment; average athlete deal size grew 100% from 2024 to 2025 alone (OpenSponsorship, 2026).
+        Sources: Influencer Marketing Hub Benchmark Reports (2016–2025 actual data); 2026 figure projected by industry analysts. $1.7B (2016) → $32.55B (2025) → ~$40B projected (2026). The market grew 49% in 2020. Average athlete deal size grew 100% from 2024 to 2025 (OpenSponsorship, 2026).
       </div>
     </div>
 
@@ -290,7 +295,7 @@
 
       <div class="quote-card quote-card--teal fade-in">
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">499,000 Creators</span></div>
-        <p class="quote-text">"<strong>The NIL Gold Rush: How 499,000 College Athletes are Becoming Creators</strong>" — with social follower count driving deal value for virtually every one of them.</p>
+        <p class="quote-text">"<strong>The NIL Gold Rush: How 499,000 College Athletes are Becoming Creators.</strong>"</p>
         <div class="quote-footer">
           <div class="quote-attribution">Natalie Jarvey, Like and Subscribe<span>October 2025</span></div>
           <a href="https://likeandsubscribenews.substack.com/p/the-nil-gold-rush-how-499000-college" target="_blank" rel="noopener" class="quote-link">Source →</a>
@@ -409,8 +414,8 @@
     <header class="section-header">
       <div>
         <div class="section-label">Section 02</div>
-        <h2 class="section-title">The Cost Crisis in<br>Youth Sports</h2>
-        <p class="section-subtitle">Average family spending on youth sports has surged 46% in five years — double the rate of U.S. inflation. The $40 billion now flowing through youth sports dwarfs the NFL, yet the average masks extremes that reach $25,000 per family per year.</p>
+        <h2 class="section-title">Family Costs in<br>Youth Sports</h2>
+        <p class="section-subtitle">Average family spending on a child's primary sport rose 46% from 2019 to 2024, about double U.S. inflation over the same period. Total U.S. family spending is an estimated $40 billion a year; individual outlays range from near zero to about $25,000.</p>
       </div>
     </header>
 
@@ -436,7 +441,7 @@
       </div>
       <div class="stat-card stat-card--orange fade-in" data-delay="120">
         <div class="stat-number">+46%</div>
-        <div class="stat-desc">Overall cost surge since 2019 across all youth sports — average family spend now $1,016</div>
+        <div class="stat-desc">Overall cost increase since 2019 across all youth sports — average family spend now $1,016</div>
         <div class="stat-footer">
           <span class="stat-source">Jon Solomon, Aspen Institute Project Play, Feb 2025</span>
           <a href="https://projectplay.org/news/2025/2/24/project-play-survey-family-spending-on-youth-sports-rises-46-over-five-years" target="_blank" rel="noopener" class="stat-link">Source →</a>
@@ -467,11 +472,35 @@
         </div>
       </div>
       <div class="stat-card stat-card--orange fade-in" data-delay="360">
-        <div class="stat-number">$15K</div>
-        <div class="stat-desc">Annual total at the high end of competitive travel baseball programs, when everything is counted</div>
+        <div class="stat-number">$2,178</div>
+        <div class="stat-desc">Average annual travel-baseball <strong>team fee</strong> across a survey of 700+ families &mdash; all-in program costs run <strong>$1,400 (budget) to $17,600 (elite)</strong></div>
         <div class="stat-footer">
-          <span class="stat-source">Baseball Mode / Beyond the Dugout, Oct 2024</span>
+          <span class="stat-source">Bat Digest survey (700+ families), via Baseball Mode, Oct 2024</span>
           <a href="https://baseballmode.com/blogs/blog/travel-baseball-101" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="420">
+        <div class="stat-number">2.6×</div>
+        <div class="stat-desc">The income gap: families earning $100K+ spend <strong>$1,591</strong> on a child's primary sport — vs. just <strong>$604</strong> for families under $50K</div>
+        <div class="stat-footer">
+          <span class="stat-source">Aspen Institute Project Play — 2024 Parent Survey (Dorsch &amp; Blazo), p.81</span>
+          <a href="Project-Play-Survey-2025/National-Youth-Sports-Parent-Survey-FINAL.pdf" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="480">
+        <div class="stat-number">$2,048</div>
+        <div class="stat-desc"><strong>Dance is the most expensive primary sport</strong> — 2–4× what families pay for baseball, soccer, or basketball</div>
+        <div class="stat-footer">
+          <span class="stat-source">Aspen Institute Project Play — 2024 Parent Survey (Dorsch &amp; Blazo), p.113</span>
+          <a href="Project-Play-Survey-2025/National-Youth-Sports-Parent-Survey-FINAL.pdf" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--orange fade-in" data-delay="540">
+        <div class="stat-number">+93%</div>
+        <div class="stat-desc">The teen premium: primary-sport spending nearly doubles from ages 6–10 (<strong>$697</strong>) to 15–18 (<strong>$1,346</strong>)</div>
+        <div class="stat-footer">
+          <span class="stat-source">Aspen Institute Project Play — 2024 Parent Survey (Dorsch &amp; Blazo), p.95</span>
+          <a href="Project-Play-Survey-2025/National-Youth-Sports-Parent-Survey-FINAL.pdf" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
     </div>
@@ -485,7 +514,7 @@
       <div class="chart-block fade-in">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Sport-by-Sport Cost Surge</div>
+            <div class="chart-title">Sport-by-Sport Cost Increase</div>
             <div class="chart-subtitle">Avg. annual family spend, 2019 vs. 2024 — ordered by % increase</div>
           </div>
           <div class="chart-actions">
@@ -518,12 +547,52 @@
 
     </div>
 
+    <!-- Full-width: cost by sport, complete breakdown (NEW) -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">What Each Sport Costs &mdash; The Full Breakdown</div>
+          <div class="chart-subtitle">Average annual spend per child, by category, across 16 sports &mdash; sorted most to least expensive</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-sport-spend', 'youth-sports-cost-by-sport-full.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:560px;"><canvas id="chart-sport-spend"></canvas></div>
+      <div class="chart-note">
+        Source: Aspen Institute / Utah State <strong>2019 National Youth Sport Survey</strong> (Dr. Travis Dorsch, n&nbsp;=&nbsp;1,032 families, all 50 states) &mdash; the most complete per-sport breakdown available; the 2024 survey only broke out six sports. Bars are mean annual spend per child on one sport across the five tracked categories. Overall youth-sports spending has since risen <strong>~46% (2019&rarr;2024)</strong>, so current costs run higher; less-common sports (ice hockey, field hockey, lacrosse) have smaller samples.
+      </div>
+    </div>
+
+    <!-- Full-width: travel baseball real costs (NEW) -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">Travel Baseball: What It Actually Costs</div>
+          <div class="chart-subtitle">All-in annual cost range by program tier &mdash; bars show reported low-to-high, not a single number</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-travel-baseball', 'travel-baseball-cost-by-tier.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:240px;"><canvas id="chart-travel-baseball"></canvas></div>
+      <div class="chart-note">
+        Source: <strong>Bat Digest survey of 700+ travel-baseball families</strong> (via Baseball Mode, Oct 2024). The average annual <em>team fee</em> alone is <strong>$2,178</strong>; bars show each tier's all-in total (team fees + uniforms + equipment + travel/lodging). Only elite programs approach the five-figure range often quoted as typical.
+      </div>
+    </div>
+
     <!-- Full-width: cost spectrum (NEW) -->
     <div class="chart-block fade-in">
       <div class="chart-block-header">
         <div>
-          <div class="chart-title">The Real Price Tag: From Average to Extreme</div>
-          <div class="chart-subtitle">What families actually pay across different levels of youth sports commitment</div>
+          <div class="chart-title">Annual Cost by Level of Play</div>
+          <div class="chart-subtitle">Average annual family spend, from recreational to elite travel programs</div>
         </div>
         <div class="chart-actions">
           <button class="btn-download" onclick="downloadChart('chart-cost-ladder', 'youth-sports-cost-spectrum.png')">
@@ -534,7 +603,27 @@
       </div>
       <div class="chart-wrapper" style="height:300px;"><canvas id="chart-cost-ladder"></canvas></div>
       <div class="chart-note">
-        Sources: Aspen Institute Feb 2025 (national avg, high end); Kiplinger / Project Play (teen avg); Empower Jun 2025 (hockey); Baseball Mode / Beyond the Dugout Oct 2024 (travel baseball). The Aspen Institute "average" of $1,016 is accurate — but masks a range from $0 to $25,000. The jump from $2,583 to $15,000 represents the travel sports premium that is bankrupting middle-class families.
+        Sources: Aspen Institute Feb 2025 (national avg, survey max); Kiplinger / Project Play (teen avg); Empower Jun 2025 (hockey); Bat Digest survey of 700+ families, via Baseball Mode, Oct 2024 (travel baseball). The &ldquo;elite travel baseball&rdquo; bar marks the <strong>top</strong> of the reported $9,000&ndash;$17,600 all-in range, not a typical cost; the Aspen average of $1,016 spans $0 to ~$25,000.
+      </div>
+    </div>
+
+    <!-- Full-width: spending by household income (survey) -->
+    <div class="chart-block fade-in">
+      <div class="chart-block-header">
+        <div>
+          <div class="chart-title">The Income Gap: Annual Spend by Household Income</div>
+          <div class="chart-subtitle">Average family spend per child (primary + other sports combined), by income tier — 2024 parent survey</div>
+        </div>
+        <div class="chart-actions">
+          <button class="btn-download" onclick="downloadChart('chart-cost-income', 'youth-sports-spend-by-income.png')">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+            Download PNG
+          </button>
+        </div>
+      </div>
+      <div class="chart-wrapper" style="height:280px;"><canvas id="chart-cost-income"></canvas></div>
+      <div class="chart-note">
+        Source: Aspen Institute Project Play — 2024 National Youth Sports Parent Survey (Dorsch &amp; Blazo, n = 1,848), p.81. Families earning $100K+ spend about <strong>2.6× more</strong> than families under $50K once primary and secondary sports are combined ($2,362 vs. $890). Travel and lodging is the biggest single line item at every income level.
       </div>
     </div>
 
@@ -554,7 +643,7 @@
 
       <div class="quote-card quote-card--orange quote-card--featured fade-in" data-delay="80">
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Washington Post, Jan 2026</span></div>
-        <p class="quote-text">"Family spending on youth sports jumped <strong>46 percent from 2019 to 2024, reaching an estimated $40 billion a year. That's more than the annual revenues of the NFL and NBA combined.</strong>" One Florida mother estimates she spends at least $8,000 a year on baseball for her 12-year-old — just club fees alone run $3,000.</p>
+        <p class="quote-text">"Family spending on youth sports jumped <strong>46 percent from 2019 to 2024, reaching an estimated $40 billion a year.</strong>" The Post traces a club-baseball economy in which it can run <strong>"$50 to try out, $3,000 to play."</strong></p>
         <div class="quote-footer">
           <div class="quote-attribution">Todd C. Frankel, The Washington Post<span>The soaring price of youth sports: $50 to try out, $3,000 to play · January 2026</span></div>
           <a href="https://www.washingtonpost.com/business/2026/01/07/youth-sports-cost-parents-investors-profit/" target="_blank" rel="noopener" class="quote-link">Source →</a>
@@ -608,19 +697,28 @@
 
       <div class="quote-card quote-card--orange quote-card--featured fade-in">
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Market Context</span></div>
-        <p class="quote-text">"<strong>The global youth sports market reached an estimated $56 billion in 2025 and is projected to hit $154.5 billion by 2035</strong>, a compound annual growth rate of 10.68%... The United States accounts for the largest single share at over $40 billion." Critics use the term <strong>'youth sports industrial complex'</strong> to describe how commercialization has shifted the purpose of youth athletics from development and fun toward revenue generation."</p>
+        <p class="quote-text">"<strong>The global youth sports market reached an estimated $56 billion in 2025 and is projected to hit $154.5 billion by 2035</strong>, a compound annual growth rate of 10.68%... The United States accounts for the largest single share at over $40 billion."</p>
         <div class="quote-footer">
-          <div class="quote-attribution">Strive (citing Business Research Insights)<span>The State of Youth Sports Business · April 2026</span></div>
-          <a href="https://joinstriveon.com/blog/youth-sports-business" target="_blank" rel="noopener" class="quote-link">Source →</a>
+          <div class="quote-attribution">Business Research Insights<span>Youth Sports Market report · 2026 (as cited by Strive)</span></div>
+          <a href="https://www.businessresearchinsights.com/market-reports/youth-sports-market-117644" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
       <div class="quote-card quote-card--orange fade-in">
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">The Equity Gap</span></div>
-        <p class="quote-text">"The income-based participation gap has reached <strong>20.2 percentage points: children from the wealthiest families are nearly twice as likely to play organized sports</strong> as those from the lowest-income families."</p>
+        <p class="quote-text">The income-based participation gap widened to <strong>20.2 percentage points</strong> by 2024 — up from 13.6 in 2012. Families earning over $100,000 are now <strong>twice as likely to have a child in travel sports</strong> as families earning under $50,000.</p>
         <div class="quote-footer">
-          <div class="quote-attribution">Strive (citing Project Play 2025)<span>The State of Youth Sports Business · April 2026</span></div>
-          <a href="https://joinstriveon.com/blog/youth-sports-business" target="_blank" rel="noopener" class="quote-link">Source →</a>
+          <div class="quote-attribution">Aspen Institute Project Play<span>State of Play 2025: Participation Trends</span></div>
+          <a href="https://projectplay.org/state-of-play-2025/participation-trends" target="_blank" rel="noopener" class="quote-link">Source →</a>
+        </div>
+      </div>
+
+      <div class="quote-card quote-card--orange fade-in" data-delay="80">
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Equity Gap, Peer-Reviewed</span></div>
+        <p class="quote-text">A systematic review and meta-analysis across high-income countries found <strong>children in higher socioeconomic-status households were 1.87 times more likely to participate in sport</strong> than those from lower-income homes (OR 1.87).</p>
+        <div class="quote-footer">
+          <div class="quote-attribution">Owen, Nau, Reece et al., Int'l Journal of Behavioral Nutrition &amp; Physical Activity<span>Peer-reviewed meta-analysis · 2022</span></div>
+          <a href="https://doi.org/10.1186/s12966-022-01263-7" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
@@ -652,10 +750,10 @@
       </div>
 
       <div class="quote-card quote-card--orange fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Travel Baseball: $4K–$15K</span></div>
-        <p class="quote-text">"At the high end of competitive travel programs, <strong>total annual spend reaches $10,000 to $15,000 per player when everything is counted.</strong>"</p>
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Travel Baseball, by the Numbers</span></div>
+        <p class="quote-text">A survey of 700+ travel-baseball families found the <strong>average annual team fee is $2,178</strong> &mdash; but all-in costs scale sharply by program: <strong>$1,400–$3,500 (budget), $4,250–$8,450 (mid-level), $9,000–$17,600 (elite).</strong></p>
         <div class="quote-footer">
-          <div class="quote-attribution">Baseball Mode (citing Beyond the Dugout 2025 + Project Play)<span>Travel Baseball 101 · October 2024</span></div>
+          <div class="quote-attribution">Bat Digest survey (700+ families), via Baseball Mode<span>Travel Baseball 101 · October 2024</span></div>
           <a href="https://baseballmode.com/blogs/blog/travel-baseball-101" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
@@ -691,8 +789,8 @@
     <header class="section-header">
       <div>
         <div class="section-label">Section 03</div>
-        <h2 class="section-title">The NIL Revolution<br>Reaches Youth Sports</h2>
-        <p class="section-subtitle">Name, Image &amp; Likeness deals have exploded from a $917M market in 2021 to a $2.75 billion industry in 2025–26 — and the offers are now reaching high school sophomores, 9-year-olds, and even a 6-year-old golfer.</p>
+        <h2 class="section-title">NIL Deals Reach<br>Youth Sports</h2>
+        <p class="section-subtitle">Name, Image &amp; Likeness (NIL) compensation grew from $917M in 2021 to an estimated $2.75 billion in 2025–26. Reported deals now extend to high school and, in some cases, pre-teen athletes.</p>
       </div>
     </header>
 
@@ -702,18 +800,18 @@
     <div class="stat-grid">
       <div class="stat-card stat-card--blue fade-in" data-delay="0">
         <div class="stat-number">$10–12M</div>
-        <div class="stat-desc">Reported 4-year deal range for <strong>17-year-old QB Bryce Underwood</strong> to sign with Michigan — the largest HS NIL deal ever reported</div>
+        <div class="stat-desc">Reported 4-year deal for <strong>17-year-old QB Bryce Underwood</strong> to flip from LSU to Michigan — the richest recruiting flip in college football history</div>
         <div class="stat-footer">
-          <span class="stat-source">Volt / Athlon Sports, Dec 2024–Feb 2026</span>
-          <a href="https://voltedu.com/features/marketing-branding/the-nil-top-10-who-are-the-highest-paid-college-athletes/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+          <span class="stat-source">Fortune / Front Office Sports, 2025</span>
+          <a href="https://fortune.com/2025/08/28/larry-ellison-bryce-underwood-michigan-recruiting-jolin-tom-brady-dave-portnoy/" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
       <div class="stat-card stat-card--blue fade-in" data-delay="80">
-        <div class="stat-number">Age 6</div>
-        <div class="stat-desc">Youngest athlete ever to sign an NIL deal — golfer Patton Green. A 9-year-old recently signed a six-figure contract</div>
+        <div class="stat-number">Age 13</div>
+        <div class="stat-desc">Youngest athlete in any sport <strong>ever signed by Nike</strong> to an NIL deal — soccer prodigy McKenna "Mak" Whitham</div>
         <div class="stat-footer">
-          <span class="stat-source">CleanKonnect, July 2023</span>
-          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="stat-link">Source →</a>
+          <span class="stat-source">ESPN, 2024</span>
+          <a href="https://www.espn.com/soccer/story/_/id/39539772/usa-youth-soccer-whitham-youngest-athlete-sign-nike-nil-deal" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
       <div class="stat-card stat-card--blue fade-in" data-delay="160">
@@ -726,7 +824,7 @@
       </div>
       <div class="stat-card stat-card--blue fade-in" data-delay="240">
         <div class="stat-number">45</div>
-        <div class="stat-desc">U.S. states (plus D.C.) now allowing some form of NIL for high school athletes — near-universal adoption</div>
+        <div class="stat-desc">U.S. states (plus D.C.) now allow some form of NIL for high school athletes</div>
         <div class="stat-footer">
           <span class="stat-source">2aDays, December 2025</span>
           <a href="https://www.2adays.com/blog/which-high-school-athletes-can-get-nil-deals-in-2025/" target="_blank" rel="noopener" class="stat-link">Source →</a>
@@ -742,7 +840,7 @@
       <div class="chart-block fade-in">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">The NIL Market Explosion</div>
+            <div class="chart-title">NIL Market Size (2021–2026)</div>
             <div class="chart-subtitle">Total projected NIL market size (USD millions)</div>
           </div>
           <div class="chart-actions">
@@ -753,13 +851,13 @@
           </div>
         </div>
         <div class="chart-wrapper" style="height:280px;"><canvas id="chart-nil-market"></canvas></div>
-        <div class="chart-note">Sources: Opendorse "NIL at 1" (2021–22: $917M); Opendorse "NIL at 3" (2023–24: $1.17B confirmed; 2024–25: $1.67B confirmed); Opendorse "NIL at Four" July 2025 (2025–26: $2.75B; 2028–29 trajectory: $3.15B). Dashed = projected. All four Opendorse reports are the authoritative annual benchmark for the NIL market.</div>
+        <div class="chart-note">Sources: Opendorse "NIL at 1" (2021–22: $917M), "NIL at 3" (2023–24: $1.17B; 2024–25: $1.67B), and "NIL at Four" (July 2025), which projects the 2025–26 market at $2.75B. Solid line = reported actuals; dashed = Opendorse's own forecast. Opendorse's annual reports are the industry-standard NIL benchmark.</div>
       </div>
 
       <div class="chart-block fade-in" data-delay="80">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Eye-Popping Individual Deals</div>
+            <div class="chart-title">Individual NIL Valuations &amp; Reported Deals</div>
             <div class="chart-subtitle">High school &amp; youth athlete NIL valuations / reported deal values (USD millions)</div>
           </div>
           <div class="chart-actions">
@@ -770,7 +868,7 @@
           </div>
         </div>
         <div class="chart-wrapper" style="height:280px;"><canvas id="chart-nil-deals"></canvas></div>
-        <div class="chart-note">Sources: Volt Feb 2026 (Underwood); CBS News Dec 2022 (James, Williams, Manning); NPR Apr 2026 (NC athlete); CleanKonnect Jul 2023 (Wadood Jr.). Bronny James, Mikey Williams, Arch Manning = On3 NIL valuations. Others = reported deal values.</div>
+        <div class="chart-note">Sources: Fortune / Front Office Sports 2025 (Underwood, reported $10–12M over four years); CBS News Dec 2022 (James, Williams, Manning); NPR Apr 2026 (NC athlete); KTLA Jul 2023 (Wadood Jr., reported six figures — charted at the $100K floor). Bronny James, Mikey Williams &amp; Arch Manning figures are On3 NIL <em>valuations</em> (estimates), not signed deals; the rest are reported deal values.</div>
       </div>
 
     </div>
@@ -781,38 +879,20 @@
     <div class="quotes-grid">
 
       <div class="quote-card quote-card--blue quote-card--featured fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">$12M at Age 17</span></div>
-        <p class="quote-text">"A bidding war for the nation's top-ranked high school quarterback ended with the University of Michigan outracing LSU, reportedly <strong>paying up to $12 million over four years, for 17-year-old Bryce Underwood's services...</strong> Larry Ellison, the founder of Oracle and the third richest man in the world, [helped] pitch in."</p>
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">$10–12M at Age 17</span></div>
+        <p class="quote-text">Michigan's Champions Circle collective reportedly offered the nation's No. 1 recruit <strong>$10–12 million over four years</strong> to flip from LSU — bankrolled in part by Oracle co-founder Larry Ellison and his wife Jolin. Collective chairman Nate Forbes said the Ellisons <strong>"were instrumental in making this happen by providing Champions Circle with invaluable guidance and financial resources."</strong></p>
         <div class="quote-footer">
-          <div class="quote-attribution">Volt<span>The NIL Top 10: Who Are the Highest-Paid College Athletes? · February 2026</span></div>
-          <a href="https://voltedu.com/features/marketing-branding/the-nil-top-10-who-are-the-highest-paid-college-athletes/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--blue fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">9-Year-Old, Six Figures</span></div>
-        <p class="quote-text">"Ghalee Wadood Jr., a <strong>9-year-old from Los Angeles, signed an NIL deal worth 6 figures</strong> with sports agency Family 4 Life after his first year of contact football" — and "Ghalee Wadood Jr. had to ask what a sports agency was in the first place."</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
-          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
+          <div class="quote-attribution">Front Office Sports / Fortune<span>"Oracle billionaire Larry Ellison funded Michigan's NIL stunner" · 2025</span></div>
+          <a href="https://frontofficesports.com/larry-ellison-michigan-nil-bryce-underwood/" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
       <div class="quote-card quote-card--blue fade-in" data-delay="80">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Baby Gronk, Age 8</span></div>
-        <p class="quote-text">"<strong>Baby Gronk San Miguel has an NIL valuation of $115,000 while being only eight years old.</strong>"</p>
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">9-Year-Old, Six Figures</span></div>
+        <p class="quote-text"><strong>"9-year-old signs six-figure NIL deal with sports agency."</strong> Ghalee Wadood Jr., a standout in Snoop Dogg's youth football league, signed with Family 4 Life — an agency that also represents NFL players — becoming the youngest in the league to ink a deal.</p>
         <div class="quote-footer">
-          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
-          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--blue fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Age 6 — The Floor</span></div>
-        <p class="quote-text">"One of the youngest athletes to sign an NIL deal... [is] <strong>golfing phenom Patton Green who was six</strong>" at the time of signing.</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">CleanKonnect<span>9-Year-Old NIL Deal · July 2023</span></div>
-          <a href="https://nilcertifications.cleankonnect.com/blog/9-year-old-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
+          <div class="quote-attribution">KTLA (Los Angeles)<span>9-Year-Old Signs Six-Figure NIL Deal · July 2023</span></div>
+          <a href="https://ktla.com/news/local-news/9-year-old-signs-six-figure-nil-deal-with-sports-agency/" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
@@ -836,10 +916,10 @@
 
       <div class="quote-card quote-card--blue fade-in" data-delay="80">
         <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Nike Picks a 13-Year-Old</span></div>
-        <p class="quote-text">"At 13 years old, McKenna 'Mak' Whitham made history as <strong>the youngest athlete across all sports to sign a NIL deal with Nike.</strong>"</p>
+        <p class="quote-text">"U.S. soccer phenom Whitham, 13, youngest to ink Nike NIL deal" — she <strong>"becomes the youngest women's soccer player and youngest athlete in any sport to sign an NIL deal with Nike."</strong></p>
         <div class="quote-footer">
-          <div class="quote-attribution">Business of College Sports<span>Nike's NIL Deals: Full List · December 2024</span></div>
-          <a href="https://businessofcollegesports.com/name-image-likeness/nikes-nil-deals-full-list-of-nike-high-school-and-college-athletes/" target="_blank" rel="noopener" class="quote-link">Source →</a>
+          <div class="quote-attribution">ESPN<span>U.S. Soccer Phenom Whitham, 13, Youngest to Ink Nike NIL Deal · 2024</span></div>
+          <a href="https://www.espn.com/soccer/story/_/id/39539772/usa-youth-soccer-whitham-youngest-athlete-sign-nike-nil-deal" target="_blank" rel="noopener" class="quote-link">Source →</a>
         </div>
       </div>
 
@@ -853,7 +933,7 @@
       </div>
 
       <div class="quote-card quote-card--blue quote-card--featured fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Market Explosion</span></div>
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Market Growth</span></div>
         <p class="quote-text">"Since July 1, 2021, the total projected NIL market has <strong>exploded from $917 million in 2021–22 to an expected $1.67 billion in 2024–25</strong> – with no signs of slowing down." Early projections point to the total NIL market <strong>exceeding $2.5 billion in the first year of revenue sharing.</strong></p>
         <div class="quote-footer">
           <div class="quote-attribution">Opendorse, "NIL at 3" — the industry-standard annual report<span>CalMatters / Opendorse · February 2025</span></div>
@@ -871,7 +951,7 @@
       </div>
 
       <div class="quote-card quote-card--blue fade-in" data-delay="80">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">45 States, Floodgates Open</span></div>
+        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">45 States Allow HS NIL</span></div>
         <p class="quote-text">"By late 2025, updated state-by-state trackers from NIL platforms and legal guides indicate that <strong>45 states, plus Washington, D.C., will allow some form of NIL for high school athletes.</strong>"</p>
         <div class="quote-footer">
           <div class="quote-attribution">2aDays<span>Which High School Athletes Can Get NIL Deals in 2025? · December 2025</span></div>
@@ -911,56 +991,382 @@
       <div>
         <div class="section-label">Section 04</div>
         <h2 class="section-title">Data Deep Dive:<br>The Raw Numbers</h2>
-        <p class="section-subtitle">Original analysis across three fronts — actual social media account metrics from public data, longitudinal financial data from the Aspen Institute and industry databases, and granular NIL market data from Opendorse, the sport's authoritative annual reporting source.</p>
+        <p class="section-subtitle">Underlying data across three areas: public social media account metrics, family-spending and market figures from the Aspen Institute and industry sources, and NIL market data from Opendorse's annual reports.</p>
       </div>
     </header>
 
-    <!-- ── SOCIAL MEDIA METRICS ── -->
-    <div class="subsection-label"><span class="subsection-label-text">Social Media: Account Performance</span></div>
+    <!-- SOCIAL MEDIA: ACCOUNTS, AUDIENCE & GROWTH -->
+    <div class="subsection-label"><span class="subsection-label-text">Social Media: Accounts, Audience &amp; Growth</span></div>
 
+    <p class="dd-note">
+      <strong>How to read this.</strong> Follower counts are public profile data captured in late 2025–2026 and shift daily — every account links to its live profile so any figure can be re-checked at the source. Platforms do <em>not</em> publish per-account audience demographics (an individual account's age breakdown is private analytics visible only to its owner), so the audience chart below uses platform-level distributions from Statista / DataReportal plus the figures companies disclose themselves.
+    </p>
+
+    <!-- Interactive account leaderboard -->
+    <div class="dd-leaderboard">
+
+      <article class="dd-account fade-in">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Overtime</div>
+            <div class="dd-account-focus">Youth &amp; amateur sports media network</div>
+          </div>
+          <span class="dd-account-rank">01</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/overtime/" target="_blank" rel="noopener">@overtime<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">10M</span>
+            <div class="dd-bar"><i style="width:19%"></i></div>
+          </div>
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.6-1.7-1.8-2.8h-2.7v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.1c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V8.6c1 .7 2.3 1.2 3.6 1.2V7.1c-.7 0-1.3-.2-1.8-.5z"/></svg></span>
+            <a class="dd-handle" href="https://www.tiktok.com/@overtime" target="_blank" rel="noopener">@overtime<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">34.3M</span>
+            <div class="dd-bar"><i style="width:100%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot"><span class="dd-foot-key">100M+</span> followers across 7 platforms · 3B+ views/mo (Overtime)</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="60">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">House of Highlights</div>
+            <div class="dd-account-focus">Highlights &amp; next-gen fandom</div>
+          </div>
+          <span class="dd-account-rank">02</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/houseofhighlights/" target="_blank" rel="noopener">@houseofhighlights<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">52M</span>
+            <div class="dd-bar"><i style="width:100%"></i></div>
+          </div>
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.6-1.7-1.8-2.8h-2.7v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.1c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V8.6c1 .7 2.3 1.2 3.6 1.2V7.1c-.7 0-1.3-.2-1.8-.5z"/></svg></span>
+            <a class="dd-handle" href="https://www.tiktok.com/@houseofhighlights" target="_blank" rel="noopener">@houseofhighlights<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">31.2M</span>
+            <div class="dd-bar"><i style="width:91%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Instagram growth: 2.1M (’16) → 10M (’18) → <span class="dd-foot-key">~52M</span> (’25)</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="120">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Ball Is Life</div>
+            <div class="dd-account-focus">High-school &amp; AAU basketball</div>
+          </div>
+          <span class="dd-account-rank">03</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/ballislife/" target="_blank" rel="noopener">@ballislife<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">8M</span>
+            <div class="dd-bar"><i style="width:15%"></i></div>
+          </div>
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.6-1.7-1.8-2.8h-2.7v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.1c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V8.6c1 .7 2.3 1.2 3.6 1.2V7.1c-.7 0-1.3-.2-1.8-.5z"/></svg></span>
+            <a class="dd-handle" href="https://www.tiktok.com/@ballislife" target="_blank" rel="noopener">@ballislife<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">6.4M</span>
+            <div class="dd-bar"><i style="width:19%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot"><span class="dd-foot-key">~14M</span> combined across Instagram + TikTok · 418M TikTok likes</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="180">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">SLAM</div>
+            <div class="dd-account-focus">Basketball culture, high school → pro</div>
+          </div>
+          <span class="dd-account-rank">04</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/slam/" target="_blank" rel="noopener">@slam<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">4M</span>
+            <div class="dd-bar"><i style="width:8%"></i></div>
+          </div>
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.6-1.7-1.8-2.8h-2.7v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.1c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V8.6c1 .7 2.3 1.2 3.6 1.2V7.1c-.7 0-1.3-.2-1.8-.5z"/></svg></span>
+            <a class="dd-handle" href="https://www.tiktok.com/@slam" target="_blank" rel="noopener">@slam<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">2M</span>
+            <div class="dd-bar"><i style="width:6%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Plus <a href="https://www.instagram.com/slam_hs/" target="_blank" rel="noopener">@slam_hs</a> (~2M) dedicated to high-school hoops</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="240">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">MaxPreps</div>
+            <div class="dd-account-focus">Official high-school sports stats platform</div>
+          </div>
+          <span class="dd-account-rank">05</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/maxpreps/" target="_blank" rel="noopener">@maxpreps<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">3M</span>
+            <div class="dd-bar"><i style="width:6%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Instagram growth: passed 1M in 2022 → <span class="dd-foot-key">~3M</span> (’25)</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="300">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Bleacher Report</div>
+            <div class="dd-account-focus">Social-first sports media · parent of House of Highlights</div>
+          </div>
+          <span class="dd-account-rank">06</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/bleacherreport/" target="_blank" rel="noopener">@bleacherreport<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">22M</span>
+            <div class="dd-bar"><i style="width:42%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Plus <a href="https://www.instagram.com/brfootball/" target="_blank" rel="noopener">@brfootball</a> (~16M) and <a href="https://www.instagram.com/brkicks/" target="_blank" rel="noopener">@brkicks</a> (~2M) — the network that incubated House of Highlights</footer>
+      </article>
+
+    </div>
+
+    <!-- Overtime reach & engagement metrics (company-reported) -->
+    <div class="dd-metrics fade-in">
+      <div class="dd-metrics-label">Overtime — reach &amp; engagement (company-reported)</div>
+      <div class="dd-metrics-grid">
+        <div class="dd-metric"><span class="dd-metric-num dd-count">100M+</span><span class="dd-metric-label">followers across 7 platforms</span></div>
+        <div class="dd-metric"><span class="dd-metric-num dd-count">3B+</span><span class="dd-metric-label">content views per month</span></div>
+        <div class="dd-metric"><span class="dd-metric-num dd-count">81%</span><span class="dd-metric-label">of its audience is under age 35</span></div>
+        <div class="dd-metric"><span class="dd-metric-num dd-count">16M</span><span class="dd-metric-label">new followers added in 2024 (+16% YoY)</span></div>
+      </div>
+      <a class="dd-metrics-src" href="https://overtime.tv/about" target="_blank" rel="noopener">Source: Overtime (overtime.tv/about) + Marketing Brew, Dec 2024 →</a>
+    </div>
+
+    <!-- Live hashtag feeds -->
+    <div class="dd-hashtags fade-in">
+      <span class="dd-hashtags-label">Live hashtag feeds</span>
+      <div class="dd-hashtags-list">
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/overtime" target="_blank" rel="noopener">#overtime</a>
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/ballislife" target="_blank" rel="noopener">#ballislife</a>
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/houseofhighlights" target="_blank" rel="noopener">#houseofhighlights</a>
+        <a class="dd-hashtag" href="https://www.instagram.com/explore/tags/youthsports/" target="_blank" rel="noopener">#youthsports</a>
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/aau" target="_blank" rel="noopener">#aau</a>
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/hooper" target="_blank" rel="noopener">#hooper</a>
+        <a class="dd-hashtag" href="https://www.tiktok.com/tag/mixtape" target="_blank" rel="noopener">#mixtape</a>
+        <a class="dd-hashtag" href="https://www.instagram.com/explore/tags/nil/" target="_blank" rel="noopener">#nil</a>
+      </div>
+      <p class="dd-hashtags-note">TikTok and Instagram no longer surface public view totals for hashtags (TikTok removed hashtag view counts in 2024), so these chips open the live feeds rather than cite a fixed — and unverifiable — number.</p>
+    </div>
+
+    <!-- Growth + audience-demographics charts -->
     <div class="charts-row">
 
       <div class="chart-block fade-in">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Top Youth Sports Social Accounts: Instagram Reach (2025)</div>
-            <div class="chart-subtitle">Follower counts — publicly visible Instagram profile data, accessed 2025–26</div>
+            <div class="chart-title">Follower Growth: Overtime &amp; House of Highlights (2016–2026)</div>
+            <div class="chart-subtitle">Reported follower milestones — Overtime (all platforms) vs. House of Highlights (Instagram)</div>
           </div>
           <div class="chart-actions">
-            <button class="btn-download" onclick="downloadChart('chart-account-reach', 'youth-sports-account-reach.png')">
+            <button class="btn-download" onclick="downloadChart('chart-account-growth', 'sports-media-follower-growth.png')">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
               Download PNG
             </button>
           </div>
         </div>
-        <div class="chart-wrapper" style="height:280px;">
-          <canvas id="chart-account-reach"></canvas>
+        <div class="chart-wrapper" style="height:300px;">
+          <canvas id="chart-account-growth"></canvas>
         </div>
         <div class="chart-note">
-          Sources: Public Instagram account data (accounts verified active as of 2025–26). House of Highlights and Ball Is Life are among the largest sports-specific Instagram accounts globally; Overtime is the leading youth/amateur sports media company; SLAM covers youth/college basketball; MaxPreps is the official HS sports stats platform.
+          Every point is a reported figure, not interpolation. <strong>Overtime</strong> (total followers, all platforms): ~50M Apr 2021 (CNBC, at its $80M raise), 65M+ Aug 2022 (Axios / Sportico, at the $100M Series D), and 100M+ across 7 platforms sustained through 2026 (Overtime; Marketing Brew, Dec 2024). <strong>House of Highlights</strong> (Instagram): 2.1M Jan 2016 and 5M+ Mar 2017 (Wikipedia / Fast Company), 10M Jul 2018 (Fast Company), ~52M late 2025 (HypeAuditor). The lines track different scopes — a multi-platform network vs. a single Instagram account — and are shown to compare trajectories, not absolute size.
         </div>
       </div>
 
       <div class="chart-block fade-in" data-delay="80">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Overtime's Rise: 0 to 80M+ Followers (2016–2024)</div>
-            <div class="chart-subtitle">Total followers across all platforms — youth sports' first social-native media giant</div>
+            <div class="chart-title">Platform Audience by Age</div>
+            <div class="chart-subtitle">Share of each platform's global users in the two largest young-adult cohorts (2025)</div>
           </div>
           <div class="chart-actions">
-            <button class="btn-download" onclick="downloadChart('chart-overtime-growth', 'overtime-follower-growth.png')">
+            <button class="btn-download" onclick="downloadChart('chart-platform-age', 'platform-audience-age-2025.png')">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
               Download PNG
             </button>
           </div>
         </div>
-        <div class="chart-wrapper" style="height:280px;">
-          <canvas id="chart-overtime-growth"></canvas>
+        <div class="chart-wrapper" style="height:300px;">
+          <canvas id="chart-platform-age"></canvas>
         </div>
         <div class="chart-note">
-          Confirmed data points: ~15M (2019, Series B press coverage), 45M (2022, $100M Series D — TechCrunch), 80M+ (2024, Sports Business Journal). Intermediate years estimated from growth trajectory. Overtime was founded in 2016 to bring social-first content to youth sports; their trajectory mirrors the broader explosion in amateur sports content consumption on TikTok and Instagram.
+          Source: Statista / DataReportal global user demographics, 2025. Shares are of all users on each platform — the closest public proxy for "who sees this content," because platforms keep per-account audience age data private (so there is no published age breakdown for an individual account such as ESPN's). Teens aged 13–17 add roughly 7% of Instagram users and 18% of Snapchat users (Statista 2025); on TikTok and Instagram the 18–24 and 25–34 cohorts are near-parity. For an account-level reference point, Overtime reports 81% of its own audience is under 35.
         </div>
       </div>
+
+    </div>
+
+    <!-- ── INDIVIDUAL ATHLETES ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Individual Athletes: Middle School to College</span></div>
+
+    <div class="dd-note fade-in">
+      Beyond the networks, the athletes themselves are now media properties — and they break out earlier every cycle. <strong>The badge marks the level at which each first went viral; the line beneath it is their status today.</strong> Every follower count is the athlete's <em>current</em> total (approx. June 2026) — not the number they had at the time. For scale: <strong>Mikey Williams reached 3.2M Instagram followers by his sophomore year of high school.</strong>
+    </div>
+
+    <div class="dd-leaderboard">
+
+      <article class="dd-account fade-in">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Julian Newman</div>
+            <div class="dd-account-focus">Basketball · went viral as a 5th-grade varsity player — now 24, playing college ball at Bethesda University</div>
+          </div>
+          <span class="dd-account-rank">MS</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/juliannewman4/" target="_blank" rel="noopener">@juliannewman4<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">1M</span>
+            <div class="dd-bar"><i style="width:13%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">A pioneer of the middle-school mixtape era — a national following before high school</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="60">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Jaden Newman</div>
+            <div class="dd-account-focus">Basketball · pre-teen phenom alongside her brother — now playing college ball at Cal State LA</div>
+          </div>
+          <span class="dd-account-rank">MS</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/jadennewman1/" target="_blank" rel="noopener">@jadennewman1<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">2M</span>
+            <div class="dd-bar"><i style="width:25%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Followed nationally since elementary school as a youth-hoops prodigy</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="120">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Cooper Flagg</div>
+            <div class="dd-account-focus">Basketball · No. 1 HS recruit — Duke one-and-done, then No. 1 pick in the 2025 NBA Draft (Mavericks)</div>
+          </div>
+          <span class="dd-account-rank">HS</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/cooper_flagg/" target="_blank" rel="noopener">@cooper_flagg<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">2M</span>
+            <div class="dd-bar"><i style="width:25%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Tracked by millions of fans throughout high school before turning pro</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="180">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">AJ Dybantsa</div>
+            <div class="dd-account-focus">Basketball · No. 1 recruit in the 2025 class — currently a BYU freshman</div>
+          </div>
+          <span class="dd-account-rank">HS</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/aj.dybantsa/" target="_blank" rel="noopener">@aj.dybantsa<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">943K</span>
+            <div class="dd-bar"><i style="width:12%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Fronts Nike, Red Bull &amp; Fanatics at 18 — among the most-marketed teen athletes</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="240">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Livvy Dunne</div>
+            <div class="dd-account-focus">Gymnastics · broke out at LSU — graduated and retired in 2025; now a full-time media personality</div>
+          </div>
+          <span class="dd-account-rank">COLLEGE</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/livvydunne/" target="_blank" rel="noopener">@livvydunne<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">5.3M</span>
+            <div class="dd-bar"><i style="width:66%"></i></div>
+          </div>
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8c-1-.7-1.6-1.7-1.8-2.8h-2.7v11.4c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.1c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4V8.6c1 .7 2.3 1.2 3.6 1.2V7.1c-.7 0-1.3-.2-1.8-.5z"/></svg></span>
+            <a class="dd-handle" href="https://www.tiktok.com/@livvy" target="_blank" rel="noopener">@livvy<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">7.9M</span>
+            <div class="dd-bar"><i style="width:99%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot"><span class="dd-foot-key">~13M</span> combined — was the most-followed NCAA athlete on social media</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="300">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">Flau'jae Johnson</div>
+            <div class="dd-account-focus">Basketball + music · starred at LSU — drafted into the WNBA in 2026</div>
+          </div>
+          <span class="dd-account-rank">COLLEGE</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/flaujae/" target="_blank" rel="noopener">@flaujae<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">2M</span>
+            <div class="dd-bar"><i style="width:25%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Built parallel careers in hoops and hip-hop while at LSU</footer>
+      </article>
+
+      <article class="dd-account fade-in" data-delay="360">
+        <header class="dd-account-head">
+          <div>
+            <div class="dd-account-name">JuJu Watkins</div>
+            <div class="dd-account-focus">Basketball · currently at USC — a face of the women's college game</div>
+          </div>
+          <span class="dd-account-rank">COLLEGE</span>
+        </header>
+        <div class="dd-platforms">
+          <div class="dd-platform">
+            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <a class="dd-handle" href="https://www.instagram.com/jujubballin/" target="_blank" rel="noopener">@jujubballin<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
+            <span class="dd-count">1M</span>
+            <div class="dd-bar"><i style="width:13%"></i></div>
+          </div>
+        </div>
+        <footer class="dd-account-foot">Among the most-watched stars in women's college basketball</footer>
+      </article>
 
     </div>
 
@@ -972,7 +1378,7 @@
       <div class="chart-block fade-in">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Youth Sports Cost Surge vs. U.S. Inflation (2019–2024)</div>
+            <div class="chart-title">Youth Sports Cost Increase vs. U.S. Inflation (2019–2024)</div>
             <div class="chart-subtitle">Avg. annual family spend on primary sport vs. what $695 would cost if it had only risen with CPI</div>
           </div>
           <div class="chart-actions">
@@ -1021,8 +1427,8 @@
       <div class="chart-block fade-in">
         <div class="chart-block-header">
           <div>
-            <div class="chart-title">Where the $2.75B Goes: NIL by Sport (2025-26)</div>
-            <div class="chart-subtitle">Estimated compensation distribution — football-first, but the gap is closing fast</div>
+            <div class="chart-title">NIL Compensation by Sport (2025-26)</div>
+            <div class="chart-subtitle">Estimated compensation distribution by sport</div>
           </div>
           <div class="chart-actions">
             <button class="btn-download" onclick="downloadChart('chart-nil-by-sport', 'nil-by-sport-breakdown.png')">
@@ -1035,7 +1441,7 @@
           <canvas id="chart-nil-by-sport"></canvas>
         </div>
         <div class="chart-note">
-          Source: Estimated distribution based on Opendorse NIL at 3 (Feb 2025) and NIL at 4 (Jul 2025). Opendorse confirms football at ~40% of total compensation and men's basketball at ~22%; women's basketball share has roughly doubled since 2022 (the Caitlin Clark effect). Sport-level percentages are approximate — Opendorse reports aggregate trends rather than exact sport-by-sport dollar figures.
+          Source: Estimated distribution based on Opendorse NIL at 3 (Feb 2025) and NIL at 4 (Jul 2025). Opendorse confirms football at ~40% of total compensation and men's basketball at ~22%; women's basketball share has roughly doubled since 2022. Sport-level percentages are approximate — Opendorse reports aggregate trends rather than exact sport-by-sport dollar figures.
         </div>
       </div>
 
@@ -1043,7 +1449,7 @@
         <div class="chart-block-header">
           <div>
             <div class="chart-title">Men's vs. Women's NIL Market (2021-22 to 2025-26)</div>
-            <div class="chart-subtitle">Annual NIL compensation by gender — women's share growing rapidly off a low base</div>
+            <div class="chart-subtitle">Annual NIL compensation by gender</div>
           </div>
           <div class="chart-actions">
             <button class="btn-download" onclick="downloadChart('chart-nil-gender', 'nil-gender-split.png')">
@@ -1056,7 +1462,7 @@
           <canvas id="chart-nil-gender"></canvas>
         </div>
         <div class="chart-note">
-          Source: Opendorse NIL annual reports (NIL at 1, NIL at 3, NIL at 4). Confirmed market totals: $917M (2021-22), $1.17B (2023-24), $1.67B (2024-25), $2.75B (2025-26). Men/women splits estimated from percentage trends across these reports; 2022-23 interpolated at $1.01B total. Women's share grew from ~10% (2021-22) to an estimated ~26% (2025-26), driven by women's basketball post-Caitlin Clark.
+          Source: Opendorse NIL annual reports (NIL at 1, NIL at 3, NIL at 4). Confirmed market totals: $917M (2021-22), $1.17B (2023-24), $1.67B (2024-25), $2.75B (2025-26). Men/women splits estimated from percentage trends across these reports; 2022-23 interpolated at $1.01B total. Women's share grew from ~10% (2021-22) to an estimated ~26% (2025-26), driven by growth in women's basketball.
         </div>
       </div>
 
@@ -1079,7 +1485,7 @@
         <canvas id="chart-hs-nil-states"></canvas>
       </div>
       <div class="chart-note">
-        Sources: 2aDays (December 2025 — confirmed 45 states + DC = 46 jurisdictions); NFHS state-level tracking; NIL platform legal databases. The NCAA's 2021 ruling covered college athletes only — individual states had to pass separate HS legislation. Florida and Louisiana were early movers; adoption accelerated dramatically through 2023–24. Only 4 states still prohibit HS NIL as of late 2025.
+        Sources: 2aDays (December 2025 — confirmed 45 states + DC = 46 jurisdictions); NFHS state-level tracking; NIL platform legal databases. The NCAA's 2021 ruling covered college athletes only — individual states had to pass separate HS legislation. Florida and Louisiana were early movers; adoption accelerated dramatically through 2023–24. With 45 states permitting some form of HS NIL, roughly 5 states still hold out as of late 2025.
       </div>
     </div>
 
@@ -1091,7 +1497,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">Youth Sports in America — Data Research</div>
-    <p class="footer-note">Every statistic and quote links directly to its original source. Forward-looking figures are explicitly labeled as projections; nothing has been invented or misattributed. Primary sources include the Aspen Institute / Project Play, Opendorse, Pew Research Center, The Washington Post, NPR, CBS News, Newsweek, and Kiplinger, with all others cited inline. Compiled June 2026.</p>
+    <p class="footer-note">Every statistic and quote links directly to its original source. Forward-looking figures are explicitly labeled as projections, and estimated chart values are noted as such; nothing has been invented or misattributed. Primary sources include the Aspen Institute / Project Play, Opendorse, Pew Research Center, ESPN, The Washington Post, NPR, CBS News, KTLA, Fortune / Front Office Sports, Newsweek, Kiplinger, and the peer-reviewed journal Sports Psychiatry (Hogrefe), with all others cited inline. Compiled June 2026.</p>
     <div class="footer-date">Updated June 2026</div>
   </div>
 </footer>

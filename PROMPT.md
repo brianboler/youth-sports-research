@@ -1,0 +1,176 @@
+OKay I just got off the phone with my booss and he wants me to do research for an article he is writing about youth sports and how it has changed in recent years.         
+  Specifically, he wants me to hone in on 3 things to find FACTS and DATA (specifically shocking, headliner data but all data is good) about the evolution/influx/increase   
+  in: 1) social media content/online community related to youht sports (instagram, tiktok, etc.), 2) the COST surrounding youth sports -- a great website for this is called 
+  projectplay.com from the Aspen institute (for example, youth baseball can cost upwards of 15,000/year for families), think about club sports too but we also want          
+  averages amongst everyone involved in that sport, 3) facts about the rise of NIL in youth sports and money increase in that (my boss wants to find some "eye popping       
+  nuggets" about NIL in youth sports like contracts, avergage, total increase, etc.)  Attached below is the full transcript: Hey Cole, how's it going? Morning. Yes, sir.    
+  Yep, yep, per usual. Morning,                                                                                                                                              
+  guy.                                                                                                                                                                       
+  Yeah, yeah. I love just knocking it out. Yeah, it's awesome. cool.                                                                                                         
+  So, I've got a quick side project for you. So, two is a little bit of research on a couple of things. So, I'm actually writing an article right now that I'm not sure      
+  where I'm going to try and get it published, but it's basically an article in response to the a lot of the noise around new sports right now, and there's like a bunch of  
+  Democrats that have put together a bill that's completely crazy, not in, in the form of bringing attention to a lot of the problems of new sports, but but but crazy in    
+  its solutions proposed, and so there's a lot of, there's just a lot of discussion and discourse in the market right now, a lot of articles, a lot of editorials, a lot of  
+  hearings all around everything youth sports related, and you know, the Democrats are basically putting a target on private equity as the culprit, that's the villain, and  
+  like the bill, when it introduced all the language in the bill, doesn't even bother to call or understand the differences between like venture capital and growth equity   
+  and private equity, and doesn't even try to appreciate the value that those, you know, that industry provides the country in terms of capital to build, you know,          
+  solutions, and it just, they call all of them quote unquote vulture capitalists politicized,                                                                               
+  yeah.                                                                                                                                                                      
+  So anyway, we're probably one of the best position firms to actually have a little thought leadership. Oh, yeah, for sure. Yeah, we've been doing this for 12 years, we've 
+  done a ton of, ton of work in youth, we really understand what's going on, and so I'm writing an article, and there's a part, there's a part of the article that talks     
+  about what's, what's really going on in the space, and there's, you know, multiple things that I'm going to talk about, one of which is just the institutionalization of   
+  sports in general, right, like, if you rewind 12 years when we started Olesham Park, I still remember my partner and I going to Sand Hill Road, which is kind of the       
+  center of venture capital in the country, and basically visiting all the VCs, looking for co-investment interests in investing in the sports industry, and every single    
+  one of them said enough, every single one of them, and we were looking for capital, we were just looking for co-investment support to join us on investments, and every    
+  single one of them said, "There's no big companies that have been built, show me the money, show me the exits, the usual kind of refrains, and they weren't wrong, if you  
+  know, looking, looking backwards, that's true, but I think they profoundly misjudged where the market was going. And fast forward to today, there's dozens of billion      
+  dollars companies that have been built, you know, sports is now an asset class, like every investment bank on Wall Street has a sports group now, and till it's just, it's 
+  just been incredible, and with that has come, you know, a lot of just institutionalization of the industry, and I always, you know, right, you know, closely coupled with  
+  that, and this, like from the top, this increased drive for performance, and you know, and financial success, and all the stuff that's going on in college, and it all     
+  kind of, you know, rolls downstream, and you know, long gone are the days when, like, your dad and I grew up, and we're playing, you know, just playing pickup ball out on 
+  the out of the street, or you know, playing three sports a year, not all this kind of craziness that exists today with the sports world, that's all a function of a lot    
+  of that, and so that's kind of one area I talk about, and then you know another area I talk about is, is, is social media, yeah, and I'm not, I'm not sure exactly how to  
+  shape this part of the argument yet, but I'm thinking about just like the cultural impact of of youth sports with youth today, and just how you know, and I may have a     
+  slightly like distorted view, because I have three kids that have gone through sports. I'm sure your family's similar, yeah, for                                           
+  sure, for sure.                                                                                                                                                            
+  But, like, the prevalence of social media posts, and like, as part of youth culture now, and like everybody's like posting not only their own kind of athletic social      
+  media viral moment successes and cool clips and highlights and things that have been picked up, but then they also repost all their buddies. It's a community they share   
+  it, yeah, for                                                                                                                                                              
+  sure.                                                                                                                                                                      
+  And so I talk a little bit about that, and then I talk about a bunch of other stuff too, but and then there's a separate part of the article where I'm talking about the   
+  costs of youth sports, which are out of control, and you know we've done work on kind of what it costs for youth baseball travel families, and you know it's north of      
+  $15,000 Oh yeah, when you really account for all the costs, and, and, but, like, an Aspen Institute will post a number, it's like $1,000 a year on average, right? And the 
+  problem with that is that it's an average, so it's still a lot, right, but it's not, it's not as shocking as, like, the numbers that we know exist. So, anyway, so two     
+  tasks here, I'm looking for some data to support some of these points, and so first on the social media side, looking to find any way to use data to support the argument  
+  that culture is a driver here, and, and so, like, what kind, what, what incidents on Instagram, TikTok, probably those two, probably mostly Instagram, and also TikTok is, 
+  is, is comprised of youth sports-related stuff. I don't know if that kind of data is like findable or anything like that. No,                                              
+  I think I think it totally could be for sure. I'm just thinking, like, yeah, right off the bat, like tracking, you know, tracking hashtags, tracking, you know, even       
+  trends, or you know tracking the, a lot of these youth sports accounts have popped up to tracking their follower count, repost count, view count. Yeah, there's a lot of   
+  different metrics you can track.                                                                                                                                           
+  Yeah, so get creative there and just come up with a way to to make the point that, like, like in America culture has changed with the importance with the rise of kind of  
+  youth sports culture, and just trying to craft an argument that's defensible with facts and data is what I'm trying to do, so that's that's the first one, and then the    
+  second one is looking for data around the costs of youth sports to families, and the Aspen Institute has a good website with a ton of data. It's called Project Play. So,  
+  if you go to that website and look up Project Play, they've got a ton of stuff on participation levels and cost and things like that, so that's certainly one source, but  
+  then kind of just seeing what other research you might be able to find and cast some more light on the cost dynamics would would also be helpful.                          
+  Yeah, for sure.                                                                                                                                                            
+  Yeah, so those two got those two little tasks, and then yeah, and then keep cranking on the platform stuff,                                                                
+  yeah, for sure, for sure, yeah. Just to recap, social media and cost for youth sports, those are the two areas you want me to 
+  understand the differences between like venture capital and   
+  growth equity and private equity, and doesn't even try to     
+  appreciate the value that those, you know, that industry      
+  provides the country in terms of capital to build, you know,  
+  solutions, and it just, they call all of them quote unquote   
+  vulture capitalists politicized,                              
+  yeah.                                                         
+  So anyway, we're probably one of the best position firms to   
+  actually have a little thought leadership. Oh, yeah, for      
+  sure. Yeah, we've been doing this for 12 years, we've done a  
+  ton of, ton of work in youth, we really understand what's     
+  going on, and so I'm writing an article, and there's a part,  
+  there's a part of the article that talks about what's, what's 
+  really going on in the space, and there's, you know,          
+  multiple things that I'm going to talk about, one of which is 
+  just the institutionalization of sports in general, right,    
+  like, if you rewind 12 years when we started Olesham Park, I  
+  still remember my partner and I going to Sand Hill Road,      
+  which is kind of the center of venture capital in the         
+  country, and basically visiting all the VCs, looking for      
+  co-investment interests in investing in the sports industry,  
+  and every single one of them said enough, every single one of 
+  them, and we were looking for capital, we were just looking   
+  for co-investment support to join us on investments, and      
+  every single one of them said, "There's no big companies that 
+  have been built, show me the money, show me the exits, the    
+  usual kind of refrains, and they weren't wrong, if you know,  
+  looking, looking backwards, that's true, but I think they     
+  profoundly misjudged where the market was going. And fast     
+  forward to today, there's dozens of billion dollars companies 
+  that have been built, you know, sports is now an asset        
+  class, like every investment bank on Wall Street has a sports 
+  group now, and till it's just, it's just been incredible,     
+  and with that has come, you know, a lot of just               
+  institutionalization of the industry, and I always, you know, 
+  right, you know, closely coupled with that, and this, like    
+  from the top, this increased drive for performance, and you   
+  know, and financial success, and all the stuff that's going   
+  on in college, and it all kind of, you know, rolls            
+  downstream, and you know, long gone are the days when, like,  
+  your dad and I grew up, and we're playing, you know, just     
+  playing pickup ball out on the out of the street, or you      
+  know, playing three sports a year, not all this kind of       
+  craziness that exists today with the sports world, that's all 
+  a function of a lot of that, and so that's kind of one area   
+  I talk about, and then you know another area I talk about is, 
+  is, is social media, yeah, and I'm not, I'm not sure exactly  
+  how to shape this part of the argument yet, but I'm thinking  
+  about just like the cultural impact of of youth sports with   
+  youth today, and just how you know, and I may have a slightly 
+  like distorted view, because I have three kids that have      
+  gone through sports. I'm sure your family's similar, yeah,    
+  for                                                           
+  sure, for sure.                                               
+  But, like, the prevalence of social media posts, and like, as 
+  part of youth culture now, and like everybody's like posting  
+  not only their own kind of athletic social media viral        
+  moment successes and cool clips and highlights and things     
+  that have been picked up, but then they also repost all their 
+  buddies. It's a community they share it, yeah, for            
+  sure.                                                         
+  And so I talk a little bit about that, and then I talk about  
+  a bunch of other stuff too, but and then there's a separate   
+  part of the article where I'm talking about the costs of      
+  youth sports, which are out of control, and you know we've    
+  done work on kind of what it costs for youth baseball travel  
+  families, and you know it's north of $15,000 Oh yeah, when    
+  you really account for all the costs, and, and, but, like, an 
+  Aspen Institute will post a number, it's like $1,000 a year   
+  on average, right? And the problem with that is that it's an  
+  average, so it's still a lot, right, but it's not, it's not   
+  as shocking as, like, the numbers that we know exist. So,     
+  anyway, so two tasks here, I'm looking for some data to       
+  support some of these points, and so first on the social      
+  media side, looking to find any way to use data to support    
+  the argument that culture is a driver here, and, and so,      
+  like, what kind, what, what incidents on Instagram, TikTok,   
+  probably those two, probably mostly Instagram, and also       
+  TikTok is, is, is comprised of youth sports-related stuff. I  
+  don't know if that kind of data is like findable or anything  
+  like that. No,                                                
+  I think I think it totally could be for sure. I'm just        
+  thinking, like, yeah, right off the bat, like tracking, you   
+  know, tracking hashtags, tracking, you know, even trends, or  
+  you know tracking the, a lot of these youth sports accounts   
+  have popped up to tracking their follower count, repost       
+  count, view count. Yeah, there's a lot of different metrics   
+  you can track.                                                
+  Yeah, so get creative there and just come up with a way to to 
+  make the point that, like, like in America culture has        
+  changed with the importance with the rise of kind of youth    
+  sports culture, and just trying to craft an argument that's   
+  defensible with facts and data is what I'm trying to do, so   
+  that's that's the first one, and then the second one is       
+  looking for data around the costs of youth sports to          
+  families, and the Aspen Institute has a good website with a   
+  ton of data. It's called Project Play. So, if you go to that  
+  website and look up Project Play, they've got a ton of stuff  
+  on participation levels and cost and things like that, so     
+  that's certainly one source, but then kind of just seeing     
+  what other research you might be able to find and cast some   
+  more light on the cost dynamics would would also be helpful.  
+  Yeah, for sure.                                               
+  Yeah, so those two got those two little tasks, and then yeah, 
+  and then keep cranking on the platform stuff,                 
+  yeah, for sure, for sure, yeah. Just to recap, social media   
+  and cost for youth sports, those are the two areas you want   
+  me to hone in on. Sweet sounds good, yeah, for sure, yeah, of 
+  course. Bye bye.                                              
+  so, what I want you to do is to build an interface I can      
+  build on github pages that has three of those sections with a 
+  laundry list of facts, data, and "nuggets of REAL,            
+  attributable information" with a direct quote from the source 
+  and source link that links right to that article, idealing    
+  highlighting the quote.  It is IMPERATIVE that every          
+  fact/claim/data/number/statistic is DIRECTLY ATTRIBUTABLE to  
+  a valid, reputable source.  Fake numbers or false claims will 
+  be detrimental.  Make the UI of the site clean, sexy,         
+  intuitive, and easy to read and navigate
