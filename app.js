@@ -930,9 +930,9 @@ function initAccountGrowthChart() {
 }
 
 /* Chart DD-2: Platform audience by age (global users, 2025)
-   Source: Statista / DataReportal 2025 global user age distributions.
-   Instagram 18-24 ~30% / 25-34 ~33%; TikTok ~33% / ~34%;
-   Snapchat ~37% / ~25%; YouTube ~16% / ~22%. */
+   Source: Statista 2025 global user age distributions.
+   13–17: Instagram ~7%, TikTok ~14%, Snapchat ~18%, YouTube n/a (no published <18 share).
+   18–24: Instagram ~30%, TikTok ~33%, Snapchat ~37%, YouTube ~16%. */
 function initPlatformDemographicsChart() {
   const el = document.getElementById('chart-platform-age');
   if (!el) return;
@@ -944,15 +944,15 @@ function initPlatformDemographicsChart() {
       labels: ['Instagram', 'TikTok', 'Snapchat', 'YouTube'],
       datasets: [
         {
-          label: 'Ages 18–24',
-          data: [30, 33, 37, 16],
+          label: '13–17 (middle & high school)',
+          data: [7, 14, 18, null],
           backgroundColor: 'rgba(139, 92, 246, 0.90)',
           borderRadius: 6,
           borderSkipped: false,
         },
         {
-          label: 'Ages 25–34',
-          data: [33, 34, 25, 22],
+          label: '18–24 (college age)',
+          data: [30, 33, 37, 16],
           backgroundColor: 'rgba(74, 158, 255, 0.85)',
           borderRadius: 6,
           borderSkipped: false,
@@ -1582,6 +1582,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNilGenderChart();
     initHsNilStatesChart();
     initCostIncomeChart();
+    initElite11Chart();
   }, 100);
 });
 
@@ -1616,3 +1617,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardSpotlight();
   initHeroParallax();
 });
+
+
+/* ============================================================
+   CHART — Elite 11 → NFL Pipeline (Section 5, gold)
+   Source: Code Eleven / Elite 11 (codeelevenagency.com/elite-11)
+   ============================================================ */
+function initElite11Chart() {
+  const el = document.getElementById('chart-elite11');
+  if (!el) return;
+  const ctx = el.getContext('2d');
+  const labels = ['Recent Heisman winners (16 of 17)', 'NFL starting QBs (28 of 32)', 'QBs on NFL rosters, 2025 (87 of 102)'];
+  const data = [94, 88, 85];
+  const detail = ['16 of the last 17 Heisman Trophy winners', '28 of 32 NFL starting quarterbacks', '87 of 102 QBs on NFL rosters to start 2025'];
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: '% who came through Elite 11', data, backgroundColor: ['rgba(244, 183, 64, 0.95)', 'rgba(244, 183, 64, 0.72)', 'rgba(244, 183, 64, 0.52)'], borderRadius: 6, borderSkipped: false, barThickness: 38 }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { ...tooltipDefaults, callbacks: { label: (item) => `  ${item.parsed.x}% — ${detail[item.dataIndex]}`, afterLabel: () => '  Source: Code Eleven / Elite 11' } }
+      },
+      scales: {
+        x: { min: 0, max: 100, grid: { color: gridColor }, ticks: { color: tickColor, callback: v => `${v}%`, font: { size: 11 } } },
+        y: { grid: { display: false }, ticks: { color: '#8B9BB4', font: { size: 12, weight: '500' }, padding: 8 } }
+      }
+    }
+  });
+}
