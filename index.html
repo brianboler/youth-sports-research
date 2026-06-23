@@ -1223,181 +1223,35 @@
     </div>
 
     <!-- ── TOP CURRENT ATHLETE-INFLUENCERS ── -->
-    <div class="subsection-label"><span class="subsection-label-text">Top Current Athlete-Influencers, by Level</span></div>
+    <div class="subsection-label"><span class="subsection-label-text">Athlete-Influencer Index: NIL Money &times; Social Following</span></div>
 
     <div class="dd-note fade-in">
-      The most-followed athletes <em>enrolled at each level right now</em> (Instagram, approx. June 2026; bars share one scale). The pattern is the point: real reach concentrates in <strong>college</strong>, thins out sharply in <strong>high school</strong>, and at the <strong>grade-school</strong> level is driven almost entirely by a single manufactured viral act — following at that age tracks internet spectacle, not athletic standing.
+      The most-followed, highest-valued young athletes &mdash; filter by <strong>era</strong> and <strong>sport</strong>. "NIL" is each athlete's peak <a href="https://www.on3.com/nil/rankings/player/nil-valuations/" target="_blank" rel="noopener">On3 NIL valuation</a> (an estimate of market power, not a confirmed contract) unless a specific reported deal is noted; follower counts are Instagram, approx. June 2026. The point: a handful of current amateurs already rival pro rookies &mdash; and the wave that just graduated cashed in even bigger.
     </div>
 
-    <div class="dd-metrics-label">College &mdash; current, top 3 by followers</div>
-    <div class="dd-leaderboard">
-
-      <article class="dd-account fade-in">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">JuJu Watkins</div>
-            <div class="dd-account-focus">Basketball &middot; USC — a face of the women's college game</div>
-          </div>
-          <span class="dd-account-rank">01</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/jujubballin/" target="_blank" rel="noopener">@jujubballin<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">1M</span>
-            <div class="dd-bar"><i style="width:100%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">One of the most-watched stars in women's college basketball</footer>
-      </article>
-
-      <article class="dd-account fade-in" data-delay="60">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">AJ Dybantsa</div>
-            <div class="dd-account-focus">Basketball &middot; BYU freshman — No. 1 recruit in the 2025 class</div>
-          </div>
-          <span class="dd-account-rank">02</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/aj.dybantsa/" target="_blank" rel="noopener">@aj.dybantsa<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">943K</span>
-            <div class="dd-bar"><i style="width:94%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">Fronts Nike, Red Bull &amp; Fanatics — a marquee NIL freshman</footer>
-      </article>
-
-      <article class="dd-account fade-in" data-delay="120">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Jeremiah Smith</div>
-            <div class="dd-account-focus">Football &middot; Ohio State WR — ESPN's top 2026 college receiver</div>
-          </div>
-          <span class="dd-account-rank">03</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/primetimejj_.4/" target="_blank" rel="noopener">@primetimejj_.4<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">792K</span>
-            <div class="dd-bar"><i style="width:79%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">Alabama's Ryan Williams (~736K) sits just behind among current college stars</footer>
-      </article>
-
+    <div class="ath-controls" role="group" aria-label="Filter athletes">
+      <div class="ath-filter ath-era" data-filter="era">
+        <span class="ath-filter-label">Era</span>
+        <button class="ath-chip is-active" data-val="all" type="button">All</button>
+        <button class="ath-chip" data-val="current" type="button">Current</button>
+        <button class="ath-chip" data-val="past" type="button">Past</button>
+      </div>
+      <div class="ath-filter ath-sport" data-filter="sport">
+        <span class="ath-filter-label">Sport</span>
+        <button class="ath-chip is-active" data-val="all" type="button">All</button>
+        <button class="ath-chip" data-val="football" type="button">Football</button>
+        <button class="ath-chip" data-val="basketball" type="button">Basketball</button>
+        <button class="ath-chip" data-val="soccer" type="button">Soccer</button>
+        <button class="ath-chip" data-val="gymnastics" type="button">Gymnastics</button>
+        <button class="ath-chip" data-val="track" type="button">Track</button>
+      </div>
     </div>
 
-    <div class="dd-metrics-label">High school &mdash; current, top 3 by followers</div>
-    <div class="dd-leaderboard">
-
-      <article class="dd-account fade-in">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Tyran Stokes</div>
-            <div class="dd-account-focus">Basketball &middot; No. 1 recruit in the 2026 class (current senior)</div>
-          </div>
-          <span class="dd-account-rank">01</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/_thetyranstokes/" target="_blank" rel="noopener">@_thetyranstokes<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">342K</span>
-            <div class="dd-bar"><i style="width:34%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">The nation's No. 1 recruit — yet his reach still sits well below a college star's</footer>
-      </article>
-
-      <article class="dd-account fade-in" data-delay="60">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Jordan Smith Jr.</div>
-            <div class="dd-account-focus">Basketball &middot; 2026 Gatorade National Player of the Year</div>
-          </div>
-          <span class="dd-account-rank">02</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/lilsmitty_23/" target="_blank" rel="noopener">@lilsmitty_23<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">51K</span>
-            <div class="dd-bar"><i style="width:5%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">No. 2 in the 2026 class — a small fraction of college reach</footer>
-      </article>
-
-      <article class="dd-account fade-in" data-delay="120">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Caleb Holt</div>
-            <div class="dd-account-focus">Basketball &middot; five-star guard, class of 2026</div>
-          </div>
-          <span class="dd-account-rank">03</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/iamcalebholt/" target="_blank" rel="noopener">@iamcalebholt<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">46K</span>
-            <div class="dd-bar"><i style="width:5%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">Even the top high-school recruits top out in the tens of thousands</footer>
-      </article>
-
-    </div>
-
-    <div class="dd-metrics-label">Grade school &mdash; the hype tier, not a real field</div>
-    <div class="dd-leaderboard">
-
-      <article class="dd-account fade-in">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Baby Gronk</div>
-            <div class="dd-account-focus">Football &middot; 13-year-old middle-schooler — a viral act, not a verified recruit</div>
-          </div>
-          <span class="dd-account-rank">01</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/maddensanmiguel/" target="_blank" rel="noopener">@maddensanmiguel<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">650K</span>
-            <div class="dd-bar"><i style="width:65%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot"><span class="dd-foot-key">~650K</span> IG (+420K YouTube, 146K TikTok) built on skits and manufactured hype</footer>
-      </article>
-
-      <article class="dd-account fade-in" data-delay="60">
-        <header class="dd-account-head">
-          <div>
-            <div class="dd-account-name">Kason Angert</div>
-            <div class="dd-account-focus">Basketball &middot; youth skills clips that go viral</div>
-          </div>
-          <span class="dd-account-rank">02</span>
-        </header>
-        <div class="dd-platforms">
-          <div class="dd-platform">
-            <span class="dd-pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span>
-            <a class="dd-handle" href="https://www.instagram.com/kasonangert2032/" target="_blank" rel="noopener">@kasonangert2032<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 8.5l5-5M5 3.5h3.5V7"/></svg></a>
-            <span class="dd-count">22K</span>
-            <div class="dd-bar"><i style="width:2%"></i></div>
-          </div>
-        </div>
-        <footer class="dd-account-foot">The next-biggest grade-school account — and it is roughly 30&times; smaller</footer>
-      </article>
-
-    </div>
+    <div class="ath-grid" id="ath-grid" aria-live="polite"></div>
+    <div class="ath-empty" id="ath-empty" hidden>No athletes match that filter.</div>
 
     <div class="dd-note fade-in">
-      Reality check on the youngest tier: <strong>Baby Gronk</strong> (Madden San Miguel, 13) built ~650K Instagram followers on viral skits and manufactured "recruiting" hype — not a verified college offer — and the next-biggest grade-school account trails by roughly 30&times;. The rare exception is <strong>Bunchie Young</strong>, the viral "Super Bowl kid" and 2018 <em>Sports Illustrated</em> SportsKid of the Year, who actually converted childhood fame into a roster spot: he <strong>enrolled at Fresno State in 2026</strong> (~162K IG, <a href="https://www.instagram.com/theofficialbunchieyoung/" target="_blank" rel="noopener">@theofficialbunchieyoung</a>). We chart following because it is real; we do <em>not</em> repeat the fake "$115K NIL valuation" that traveled with Baby Gronk.
+      Reality check on the youngest tier: <strong>Baby Gronk</strong> (Madden San Miguel, 13) built ~650K Instagram followers on viral skits and manufactured "recruiting" hype &mdash; not a verified college offer. The rare exception is <strong>Bunchie Young</strong>, the viral "Super Bowl kid" and 2018 <em>Sports Illustrated</em> SportsKid of the Year, who actually converted childhood fame into a roster spot: he <strong>enrolled at Fresno State in 2026</strong> (~162K IG, <a href="https://www.instagram.com/theofficialbunchieyoung/" target="_blank" rel="noopener">@theofficialbunchieyoung</a>). We chart following because it is real; we do <em>not</em> repeat the fake "$115K NIL valuation" that traveled with Baby Gronk.
     </div>
 
     <!-- ── CREATORS & STREAMERS (tangential category) ── -->
@@ -1604,60 +1458,120 @@
       <div>
         <div class="section-label">Section 05</div>
         <h2 class="section-title">Elysian Park<br>Portfolio Stats</h2>
-        <p class="section-subtitle">Stats and quotes from companies in the portfolio of <strong>Elysian Park Ventures</strong> — a sports investment firm backed by the Los Angeles Dodgers ownership group.</p>
+        <p class="section-subtitle">Hard numbers from the youth-sports companies inside the portfolio of <strong>Elysian Park Ventures</strong> — the private investment arm of the Los Angeles Dodgers ownership group — mapped to the three forces reshaping youth sports: <strong>social media, the cost of play, and NIL</strong>.</p>
       </div>
     </header>
 
-    <!-- ── KEY STATISTICS ── -->
-    <div class="subsection-label"><span class="subsection-label-text">Key Statistics</span></div>
+    <!-- ── DOMAIN 1: SOCIAL MEDIA ── -->
+    <div class="subsection-label"><span class="subsection-label-text">Social Media &amp; Content</span></div>
+
+    <div class="stat-grid">
+      <div class="stat-card stat-card--gold fade-in" data-delay="0">
+        <div class="stat-number">750M</div>
+        <div class="stat-desc">Annual impressions across <strong>Code Eleven's</strong> network, which reaches 5.2M high-school athletes and 12M sports families — the social engine behind Elite 11</div>
+        <div class="stat-footer">
+          <span class="stat-source">Code Eleven Agency</span>
+          <a href="https://www.codeelevenagency.com/about-us" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="60">
+        <div class="stat-number">3.5M</div>
+        <div class="stat-desc">Total social reach for <strong>TOGETHXR</strong>, the women's-sports media company — up ~17% year-over-year, led by 2.25M TikTok followers, the largest of any women's-sports outlet</div>
+        <div class="stat-footer">
+          <span class="stat-source">TOGETHXR / PR Newswire, Feb 2025</span>
+          <a href="https://www.prnewswire.com/news-releases/togethxr-reveals-6m-record-revenue-as-everyone-watches-womens-sports-advances-the-movement-302384636.html" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="120">
+        <div class="stat-number">$6M</div>
+        <div class="stat-desc"><strong>TOGETHXR</strong> 2024 revenue, doubled year-over-year — proof that social-first women's-sports content converts attention into commerce</div>
+        <div class="stat-footer">
+          <span class="stat-source">TOGETHXR / PR Newswire, Feb 2025</span>
+          <a href="https://www.prnewswire.com/news-releases/togethxr-reveals-6m-record-revenue-as-everyone-watches-womens-sports-advances-the-movement-302384636.html" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="180">
+        <div class="stat-number">300+</div>
+        <div class="stat-desc">Rights holders and broadcasters using <strong>WSC Sports'</strong> AI to auto-generate social highlights at scale — its World Cup clips alone drew 337M YouTube views</div>
+        <div class="stat-footer">
+          <span class="stat-source">Sportcal / WSC Sports</span>
+          <a href="https://www.sportcal.com/features/wsc-sports-how-ai-has-led-the-highlights-revolution/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DOMAIN 2: THE COST OF PLAY ── -->
+    <div class="subsection-label"><span class="subsection-label-text">The Cost of Play</span></div>
+
+    <div class="stat-grid">
+      <div class="stat-card stat-card--gold fade-in" data-delay="0">
+        <div class="stat-number">$2B</div>
+        <div class="stat-desc">Youth-sports payments processed through <strong>LeagueApps</strong> in a single spring across 3,000+ organizations — a direct read on what families spend</div>
+        <div class="stat-footer">
+          <span class="stat-source">TechCrunch, July 2021</span>
+          <a href="https://techcrunch.com/2021/07/19/leagueapps-raises-15m-to-be-the-operating-system-for-youth-sports-organizations/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="60">
+        <div class="stat-number">$20M+</div>
+        <div class="stat-desc">Grant funding unlocked for youth-sports nonprofits in underserved communities through LeagueApps' <strong>FundPlay</strong> — built to offset rising costs</div>
+        <div class="stat-footer">
+          <span class="stat-source">LeagueApps / FundPlay Foundation</span>
+          <a href="https://leagueapps.com/impact/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="120">
+        <div class="stat-number">550K</div>
+        <div class="stat-desc">Sports opportunities for kids enabled by <strong>FundPlay</strong>, which gives free software to 400+ community sports organizations</div>
+        <div class="stat-footer">
+          <span class="stat-source">LeagueApps / FundPlay Foundation</span>
+          <a href="https://leagueapps.com/impact/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="180">
+        <div class="stat-number">$1M</div>
+        <div class="stat-desc">Financial aid distributed to 500+ athletes in 2025 by <strong>LOVB</strong> and its foundation — lowering the cost barrier to elite club volleyball</div>
+        <div class="stat-footer">
+          <span class="stat-source">LOVB / LOVB Foundation, 2025</span>
+          <a href="https://www.lovb.com/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DOMAIN 3: NIL & THE PIPELINE ── -->
+    <div class="subsection-label"><span class="subsection-label-text">NIL &amp; the Recruiting Pipeline</span></div>
 
     <div class="stat-grid">
       <div class="stat-card stat-card--gold fade-in" data-delay="0">
         <div class="stat-number">87 of 102</div>
-        <div class="stat-desc">Quarterbacks on NFL rosters to start the 2025 season who came through <strong>Elite 11</strong> — the high-school QB program run by Code Eleven</div>
+        <div class="stat-desc">Quarterbacks on NFL rosters to start the 2025 season who came through <strong>Elite 11</strong> — the athlete-ID pipeline EP acquired via Student Sports in Dec 2025</div>
         <div class="stat-footer">
           <span class="stat-source">Code Eleven / Elite 11</span>
           <a href="https://www.codeelevenagency.com/elite-11" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
       <div class="stat-card stat-card--gold fade-in" data-delay="60">
-        <div class="stat-number">5.2M</div>
-        <div class="stat-desc">High-school athletes reached through <strong>Code Eleven's</strong> network, alongside 12M sports families and 750M annual impressions</div>
+        <div class="stat-number">16 of 17</div>
+        <div class="stat-desc">Of the last 17 Heisman Trophy winners are <strong>Elite 11</strong> alumni, along with 38 first-round NFL picks in the past 12 years — the recruiting funnel NIL money chases</div>
         <div class="stat-footer">
-          <span class="stat-source">Code Eleven Agency</span>
-          <a href="https://www.codeelevenagency.com/about-us" target="_blank" rel="noopener" class="stat-link">Source →</a>
+          <span class="stat-source">Code Eleven / Elite 11</span>
+          <a href="https://www.codeelevenagency.com/elite-11" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
       <div class="stat-card stat-card--gold fade-in" data-delay="120">
-        <div class="stat-number">3,000+</div>
-        <div class="stat-desc">Youth sports organizations that run on <strong>LeagueApps</strong> — "the operating system for youth sports"</div>
-        <div class="stat-footer">
-          <span class="stat-source">TechCrunch, July 2021</span>
-          <a href="https://techcrunch.com/2021/07/19/leagueapps-raises-15m-to-be-the-operating-system-for-youth-sports-organizations/" target="_blank" rel="noopener" class="stat-link">Source →</a>
-        </div>
-      </div>
-      <div class="stat-card stat-card--gold fade-in" data-delay="180">
-        <div class="stat-number">$20M+</div>
-        <div class="stat-desc">Grant funding unlocked for youth-sports nonprofits in underserved communities through LeagueApps' <strong>FundPlay</strong></div>
-        <div class="stat-footer">
-          <span class="stat-source">LeagueApps / FundPlay Foundation</span>
-          <a href="https://leagueapps.com/impact/" target="_blank" rel="noopener" class="stat-link">Source →</a>
-        </div>
-      </div>
-      <div class="stat-card stat-card--gold fade-in" data-delay="240">
         <div class="stat-number">27,500+</div>
-        <div class="stat-desc">Junior athletes across 90 clubs in <strong>LOVB</strong> (League One Volleyball) — the largest club volleyball community in the U.S.</div>
+        <div class="stat-desc">Junior athletes across 90 clubs in <strong>LOVB</strong> — the largest club-volleyball community in the U.S. and a feeder for college and NIL-era athletes</div>
         <div class="stat-footer">
           <span class="stat-source">LOVB, 2026</span>
           <a href="https://www.lovb.com/" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
-      <div class="stat-card stat-card--gold fade-in" data-delay="300">
-        <div class="stat-number">$2B</div>
-        <div class="stat-desc">Youth sports payments processed through <strong>LeagueApps</strong> in a single spring</div>
+      <div class="stat-card stat-card--gold fade-in" data-delay="180">
+        <div class="stat-number">~600</div>
+        <div class="stat-desc">Athletes from the <strong>LOVB</strong> Class of 2024 now competing in collegiate volleyball — the on-ramp to college rosters and NIL deals</div>
         <div class="stat-footer">
-          <span class="stat-source">TechCrunch, July 2021</span>
-          <a href="https://techcrunch.com/2021/07/19/leagueapps-raises-15m-to-be-the-operating-system-for-youth-sports-organizations/" target="_blank" rel="noopener" class="stat-link">Source →</a>
+          <span class="stat-source">LOVB, 2025</span>
+          <a href="https://www.lovb.com/" target="_blank" rel="noopener" class="stat-link">Source →</a>
         </div>
       </div>
     </div>
@@ -1682,76 +1596,6 @@
       <div class="chart-note">
         Source: Code Eleven / Elite 11. Of 102 quarterbacks on NFL rosters to start the 2025 season, 87 came through Elite 11; 28 of 32 starters and 16 of the last 17 Heisman Trophy winners are alumni, along with 38 first-round picks in the last 12 years.
       </div>
-    </div>
-
-    <!-- ── EVIDENCE & SOURCES ── -->
-    <div class="subsection-label"><span class="subsection-label-text">Evidence &amp; Sources</span></div>
-
-    <div class="quotes-grid">
-
-      <div class="quote-card quote-card--gold quote-card--featured fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Investment Thesis</span></div>
-        <p class="quote-text">"<strong>Technology will continue to radically change how people participate and interact with sports.</strong>"</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Cole Van Nice, Co-Founder &amp; Managing Partner, Elysian Park Ventures<span>dot.LA · July 2021</span></div>
-          <a href="https://dot.la/elysian-park-ventures-2653919857.html" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold quote-card--featured fade-in" data-delay="80">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">EP Acquires Elite 11</span></div>
-        <p class="quote-text">Elysian Park acquired Student Sports — home of Elite 11 and Area Code Baseball — in December 2025, calling it "<strong>the gold standard in athlete identification and development.</strong>"</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Cole Van Nice, Managing Partner, Elysian Park Ventures<span>Youth Sports Business Report · December 2025</span></div>
-          <a href="https://youthsportsbusinessreport.com/playmetrics-sells-student-sports-to-elysian-park-ventures-sharpens-focus-on-operations-platform/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">LeagueApps</span></div>
-        <p class="quote-text">"<strong>We've built all the tools they need to power their programs.</strong>"</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Brian Litvack, CEO &amp; Co-Founder, LeagueApps<span>TechCrunch · July 2021</span></div>
-          <a href="https://techcrunch.com/2021/07/19/leagueapps-raises-15m-to-be-the-operating-system-for-youth-sports-organizations/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold fade-in" data-delay="80">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">FundPlay</span></div>
-        <p class="quote-text">FundPlay provides "<strong>free software to more than 400 community sports organizations,</strong> enabling more than <strong>550,000 unique sports opportunities for kids</strong>."</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">LeagueApps FundPlay Foundation<span>Impact Report</span></div>
-          <a href="https://leagueapps.com/impact/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Code Eleven</span></div>
-        <p class="quote-text">"<strong>At Code Eleven, we create world-class experiences and cutting-edge original content to unite brands and athletes.</strong>"</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Code Eleven Agency<span>codeelevenagency.com</span></div>
-          <a href="https://www.codeelevenagency.com/about-us" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold fade-in" data-delay="80">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">PlayMetrics</span></div>
-        <p class="quote-text">PlayMetrics sold Student Sports to Elysian Park: "<strong>This move allows us to concentrate on where we can create the most impact.</strong>"</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Mike Doernberg, CEO, PlayMetrics<span>Youth Sports Business Report · December 2025</span></div>
-          <a href="https://youthsportsbusinessreport.com/playmetrics-sells-student-sports-to-elysian-park-ventures-sharpens-focus-on-operations-platform/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
-      <div class="quote-card quote-card--gold fade-in">
-        <div class="quote-header"><div class="quote-accent"></div><span class="quote-tag">Elysian Park Ventures</span></div>
-        <p class="quote-text">Elysian Park Ventures: "<strong>We invest where sports intersect with life</strong>" — from youth to professional sports across culture, technology, health, and commerce.</p>
-        <div class="quote-footer">
-          <div class="quote-attribution">Elysian Park Ventures<span>elysianpark.ventures</span></div>
-          <a href="https://elysianpark.ventures/" target="_blank" rel="noopener" class="quote-link">Source →</a>
-        </div>
-      </div>
-
     </div>
 
   </div>

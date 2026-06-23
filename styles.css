@@ -1793,3 +1793,33 @@ section[id] { scroll-margin-top: 72px; }
   }
   .print-summary-section-title--gold { color: #8a6d1f; }
 }
+
+/* ============================================================
+   ATHLETE-INFLUENCER INDEX — filterable (Deep Dive §04)
+   ============================================================ */
+.ath-controls{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;margin:4px 0 22px}
+.ath-filter{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ath-filter-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-right:2px}
+.ath-chip{font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.01em;color:var(--text-muted);background:var(--surface);border:1px solid var(--border);padding:7px 14px;border-radius:999px;cursor:pointer;transition:color var(--transition),background var(--transition),border-color var(--transition)}
+.ath-chip:hover{color:var(--text);border-color:var(--border-light)}
+.ath-chip.is-active{color:#0b0f17;background:var(--accent);border-color:var(--accent)}
+.ath-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(246px,1fr));gap:14px}
+.ath-card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;display:flex;flex-direction:column;gap:5px;min-height:172px;transition:border-color var(--transition),transform var(--transition)}
+.ath-card:hover{border-color:var(--border-light);transform:translateY(-2px)}
+.ath-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ath-sport-tag{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:rgba(var(--accent-rgb),.14);color:var(--accent)}
+.ath-era-tag{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint)}
+.ath-name{font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--text);line-height:1.15;margin-top:4px}
+.ath-role{font-size:12px;color:var(--text-muted)}
+.ath-nil{display:flex;flex-direction:column;line-height:1.05;margin-top:auto;padding-top:10px}
+.ath-nil-val{font-size:25px;font-weight:900;letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
+.ath-nil-lbl{font-size:9.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint);margin-top:3px}
+.ath-ig{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--text-secondary);margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+a.ath-ig:hover{color:var(--accent)}
+.ath-ig--off{color:var(--text-faint);font-style:italic}
+.ath-empty{color:var(--text-muted);font-size:14px;padding:20px 0}
+@media print{
+  .ath-controls{display:none!important}
+  .ath-grid{grid-template-columns:repeat(3,1fr)!important}
+  .ath-card{break-inside:avoid}
+}

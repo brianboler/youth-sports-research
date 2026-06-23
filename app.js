@@ -1646,3 +1646,77 @@ function initElite11Chart() {
     }
   });
 }
+
+/* ============================================================
+   ATHLETE-INFLUENCER INDEX — filter by era + sport (Deep Dive §04)
+   NIL = peak On3 valuation (market estimate, not a confirmed contract)
+   unless a reported deal is noted. IG counts ≈ June 2026.
+   ============================================================ */
+function initAthleteIndex() {
+  const grid = document.getElementById('ath-grid');
+  if (!grid) return;
+  const empty = document.getElementById('ath-empty');
+
+  const ATHLETES = [
+    // ── Current (still HS / college amateurs) ──
+    { name:'Bryce Underwood', sport:'football', era:'current', role:'Michigan QB (Fr.)', nil:'$10–12M', nilVal:12, nilNote:'reported 4-yr deal', igLabel:'231K IG · On3 profile →', igUrl:'https://www.on3.com/rivals/bryce-underwood-15949/nil/' },
+    { name:'Arch Manning', sport:'football', era:'current', role:'Texas QB', nil:'$5.4M', nilVal:5.4, igLabel:'@archmanning · 619K', igUrl:'https://www.instagram.com/archmanning/' },
+    { name:'Jeremiah Smith', sport:'football', era:'current', role:'Ohio State WR', nil:'$4.2M', nilVal:4.2, igLabel:'@primetimejj_.4 · 792K', igUrl:'https://www.instagram.com/primetimejj_.4/' },
+    { name:'AJ Dybantsa', sport:'basketball', era:'current', role:'BYU (Fr.)', nil:'$4.2M', nilVal:4.2, igLabel:'@aj.dybantsa · 943K', igUrl:'https://www.instagram.com/aj.dybantsa/' },
+    { name:'Tyran Stokes', sport:'basketball', era:'current', role:'No. 1 HS recruit, 2026', nil:'~$1.5M', nilVal:1.55, nilNote:'est. HS valuation', igLabel:'@_thetyranstokes · 342K', igUrl:'https://www.instagram.com/_thetyranstokes/' },
+    { name:'JuJu Watkins', sport:'basketball', era:'current', role:'USC', nil:'$1.0M', nilVal:1.05, igLabel:'@jujubballin · 1.0M', igUrl:'https://www.instagram.com/jujubballin/' },
+    { name:'Sam Hurley', sport:'track', era:'current', role:'Texas — jumps', nil:'~$1M', nilVal:1.0, nilNote:'reported NIL earnings', igLabel:'@samhurley · 1.1M', igUrl:'https://www.instagram.com/samhurley/' },
+    { name:'McKenna “Mak” Whitham', sport:'soccer', era:'current', role:'Youth / NWSL academy', nil:'Nike deal', nilVal:0.6, nilNote:'youngest-ever Nike NIL', igLabel:"Nike's youngest NIL signee →", igUrl:'https://www.espn.com/soccer/story/_/id/39539772/usa-youth-soccer-whitham-youngest-athlete-sign-nike-nil-deal' },
+
+    // ── Past (graduated / turned pro / retired) ──
+    { name:'Bronny James', sport:'basketball', era:'past', role:'USC → NBA Lakers', nil:'$5.9M', nilVal:5.9, nilNote:'peak On3 valuation', igLabel:'@bronny · 7.7M', igUrl:'https://www.instagram.com/bronny/' },
+    { name:'Cooper Flagg', sport:'basketball', era:'past', role:'Duke → NBA Mavericks', nil:'$4.8M', nilVal:4.8, nilNote:'peak On3 valuation', igLabel:'924K IG · On3 profile →', igUrl:'https://www.on3.com/rivals/cooper-flagg-152774/nil/' },
+    { name:'Shedeur Sanders', sport:'football', era:'past', role:'Colorado → NFL Browns', nil:'$4.7M', nilVal:4.7, nilNote:'peak ~$6.5M (On3)', igLabel:'@shedeursanders · 1.8M', igUrl:'https://www.instagram.com/shedeursanders/' },
+    { name:'Livvy Dunne', sport:'gymnastics', era:'past', role:'LSU — retired 2025', nil:'$4.2M', nilVal:4.21, nilNote:'peak On3 valuation', igLabel:'@livvydunne · 5.3M', igUrl:'https://www.instagram.com/livvydunne/' },
+    { name:'Caitlin Clark', sport:'basketball', era:'past', role:'Iowa → WNBA Fever', nil:'$3.1M', nilVal:3.11, nilNote:'peak On3 valuation', igLabel:'@caitlinclark22 · 3.6M', igUrl:'https://www.instagram.com/caitlinclark22/' },
+    { name:'Travis Hunter', sport:'football', era:'past', role:'Colorado → NFL Jaguars', nil:'$3.1M', nilVal:3.1, nilNote:'peak On3 valuation', igLabel:'Instagram deactivated (2025)', igUrl:null },
+    { name:'Caleb Williams', sport:'football', era:'past', role:'USC → NFL Bears', nil:'$2.7M', nilVal:2.7, nilNote:'peak On3 valuation', igLabel:'183K IG — value was on-field', igUrl:null },
+    { name:'Angel Reese', sport:'basketball', era:'past', role:'LSU → WNBA Sky', nil:'$1.8M', nilVal:1.8, nilNote:'peak On3 valuation', igLabel:'@angelreese5 · 5.2M', igUrl:'https://www.instagram.com/angelreese5/' },
+    { name:'Paige Bueckers', sport:'basketball', era:'past', role:'UConn → WNBA Wings', nil:'$1.5M', nilVal:1.5, nilNote:'peak On3 valuation', igLabel:'@paigebueckers · 3.0M', igUrl:'https://www.instagram.com/paigebueckers/' },
+    { name:'Croix Bethune', sport:'soccer', era:'past', role:'Georgia/USC → NWSL', nil:'Top WoSo', nilVal:0.3, nilNote:"top women's-soccer NIL", igLabel:'@croixbethune · 53K', igUrl:'https://www.instagram.com/croixbethune/' },
+  ];
+
+  const state = { era:'all', sport:'all' };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+  function card(a) {
+    const ig = a.igUrl
+      ? `<a class="ath-ig" href="${a.igUrl}" target="_blank" rel="noopener">${esc(a.igLabel)}</a>`
+      : `<span class="ath-ig ath-ig--off">${esc(a.igLabel)}</span>`;
+    return `<article class="ath-card" data-era="${a.era}" data-sport="${a.sport}">
+      <div class="ath-card-top"><span class="ath-sport-tag">${esc(cap(a.sport))}</span><span class="ath-era-tag">${a.era==='current'?'Current':'Past'}</span></div>
+      <div class="ath-name">${esc(a.name)}</div>
+      <div class="ath-role">${esc(a.role)}</div>
+      <div class="ath-nil"><span class="ath-nil-val">${esc(a.nil)}</span><span class="ath-nil-lbl">${esc(a.nilNote || 'est. NIL valuation (On3)')}</span></div>
+      ${ig}
+    </article>`;
+  }
+
+  function render() {
+    const list = ATHLETES
+      .filter(a => (state.era === 'all' || a.era === state.era) && (state.sport === 'all' || a.sport === state.sport))
+      .sort((x, y) => y.nilVal - x.nilVal);
+    grid.innerHTML = list.map(card).join('');
+    if (empty) empty.hidden = list.length > 0;
+  }
+
+  document.querySelectorAll('.ath-controls .ath-filter').forEach(group => {
+    const key = group.dataset.filter;
+    group.addEventListener('click', e => {
+      const btn = e.target.closest('.ath-chip');
+      if (!btn) return;
+      group.querySelectorAll('.ath-chip').forEach(b => b.classList.toggle('is-active', b === btn));
+      state[key] = btn.dataset.val;
+      render();
+    });
+  });
+
+  render();
+}
+document.addEventListener('DOMContentLoaded', initAthleteIndex);
