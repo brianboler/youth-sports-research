@@ -1553,6 +1553,129 @@ function initTravelBaseballChart() {
 /* ============================================================
    BOOT
    ============================================================ */
+/* ============================================================
+   CHART — Google Trends: Search Interest in Youth-Sports Phrases
+   Indexed interest (0–100), U.S. web search, 2014–2025.
+   Trend SHAPES are grounded in documented patterns (NIL spike after
+   the July 1, 2021 NCAA rule change; "youth sports" 2020 COVID dip).
+   Exact index points are illustrative — regenerate from a live
+   Google Trends export before publication.
+   ============================================================ */
+function initTrendsChart() {
+  const el = document.getElementById('chart-trends');
+  if (!el) return;
+  const ctx = el.getContext('2d');
+
+  const years = ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+
+  const series = [
+    { label: 'NIL',             color: '#3B82F6', data: [2, 2, 3, 4, 5, 6, 8, 42, 70, 82, 92, 100] },
+    { label: 'Travel baseball', color: '#00E5C3', data: [40, 42, 45, 48, 52, 55, 41, 58, 65, 70, 75, 80] },
+    { label: 'Club volleyball', color: '#FF6B35', data: [24, 27, 30, 33, 37, 40, 28, 46, 56, 64, 73, 85] },
+    { label: 'Youth sports',    color: '#A78BFA', data: [55, 54, 56, 55, 57, 58, 38, 55, 60, 62, 65, 68] },
+  ];
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: series.map(s => ({
+        label: s.label,
+        data: s.data,
+        borderColor: s.color,
+        backgroundColor: s.color,
+        tension: 0.4,
+        pointRadius: 0,
+        pointHoverRadius: 5,
+        borderWidth: 2.5,
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#8B9BB4',
+            font: { size: 12, weight: '600' },
+            boxWidth: 24, boxHeight: 3, useBorderRadius: true, borderRadius: 2, padding: 18,
+          }
+        },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: { label: (item) => `  ${item.dataset.label}: ${item.parsed.y}` }
+        }
+      },
+      scales: {
+        x: { grid: { color: gridColor }, ticks: { color: '#8B9BB4', font: { size: 11, weight: '600' } } },
+        y: {
+          min: 0, max: 100,
+          grid: { color: gridColor },
+          ticks: { color: tickColor, callback: v => v, font: { size: 11 } }
+        }
+      }
+    }
+  });
+}
+
+/* ============================================================
+   CHART — Sports Hashtag Volume on TikTok (total posts, millions)
+   Source: eDigital Agency, "Top Sports Hashtags on TikTok" (2026).
+   ============================================================ */
+function initHashtagsChart() {
+  const el = document.getElementById('chart-hashtags');
+  if (!el) return;
+  const ctx = el.getContext('2d');
+
+  const labels = ['#football', '#basketball', '#soccer', '#volleyball', '#baseball'];
+  const data   = [80, 26, 18.3, 10.4, 8];
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Posts (millions)',
+        data,
+        backgroundColor: [
+          'rgba(0, 229, 195, 0.90)',
+          'rgba(0, 229, 195, 0.74)',
+          'rgba(0, 229, 195, 0.60)',
+          'rgba(0, 229, 195, 0.46)',
+          'rgba(0, 229, 195, 0.34)',
+        ],
+        borderRadius: 6,
+        borderSkipped: false,
+        barThickness: 34,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: { label: (item) => `  ${item.parsed.x}M posts` }
+        }
+      },
+      scales: {
+        x: {
+          min: 0,
+          grid: { color: gridColor },
+          ticks: { color: tickColor, callback: v => `${v}M`, font: { size: 11 } }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: '#8B9BB4', font: { size: 13, weight: '600' }, padding: 8 }
+        }
+      }
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initFadeIns();
@@ -1567,6 +1690,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     initSocialChart();
     initCreatorEconomyChart();
+    initTrendsChart();
+    initHashtagsChart();
     initSportCostChart();
     initCostBreakdownChart();
     initCostLadderChart();
