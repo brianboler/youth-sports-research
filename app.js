@@ -809,6 +809,73 @@ function buildReportDocument() {
     return [author, context].filter(Boolean).join(' — ');
   };
 
+  // The Data Deep Dive (§04) is chart/leaderboard-driven, not stat/quote cards.
+  // deepDiveHTML walks its blocks in document order and renders each kind.
+  const noteText = (el) => (el ? el.textContent.replace(/\s*Source\s*→\s*/gi, ' ').replace(/→/g, ' ').replace(/\s+/g, ' ').trim() : '');
+  const ddChart = (cb) => {
+    const t = cleanTitle(cb.querySelector('.chart-title'));
+    if (!t) return '';
+    const st = txt(cb.querySelector('.chart-subtitle'));
+    const note = noteText(cb.querySelector('.chart-note'));
+    return `<li><span class="report-fig">${t}</span>${st ? ` — ${st}` : ''}${note ? `<div class="report-src">${note}</div>` : ''}</li>`;
+  };
+  const deepDiveHTML = (sec) => {
+    const inner = sec.querySelector('.section-inner') || sec;
+    let out = '';
+    [...inner.children].forEach((node) => {
+      const cl = node.classList;
+      if (cl.contains('subsection-label')) {
+        out += `<h3>${txt(node.querySelector('.subsection-label-text')) || txt(node)}</h3>`;
+      } else if (cl.contains('dd-note')) {
+        out += `<p class="report-para">${node.innerHTML.trim()}</p>`;
+      } else if (node.id === 'ath-grid') {
+        const cards = [...node.querySelectorAll('.ath-card')];
+        if (cards.length) {
+          out += `<ul class="report-list">`;
+          cards.forEach((c) => {
+            const nil = txt(c.querySelector('.ath-nil-val'));
+            const name = txt(c.querySelector('.ath-name'));
+            const role = txt(c.querySelector('.ath-role'));
+            const lbl = txt(c.querySelector('.ath-nil-lbl'));
+            const ig = txt(c.querySelector('.ath-ig'));
+            out += `<li><span class="report-fig">${nil}</span> — ${name}${role ? `, ${role}` : ''}${lbl ? ` (${lbl})` : ''}${ig ? `<div class="report-src">${ig}</div>` : ''}</li>`;
+          });
+          out += `</ul>`;
+        }
+      } else if (cl.contains('dd-leaderboard')) {
+        out += `<ul class="report-list">`;
+        node.querySelectorAll('.dd-account').forEach((a) => {
+          const name = txt(a.querySelector('.dd-account-name'));
+          const focus = txt(a.querySelector('.dd-account-focus'));
+          const plats = [...a.querySelectorAll('.dd-platform')].map((p) => {
+            const href = p.querySelector('.dd-handle')?.getAttribute('href') || '';
+            const pf = /instagram/.test(href) ? 'IG' : /tiktok/.test(href) ? 'TikTok' : /youtube/.test(href) ? 'YouTube' : '';
+            return `${pf ? pf + ' ' : ''}${fig(p.querySelector('.dd-count'))}`.trim();
+          }).filter(Boolean).join(' · ');
+          const foot = txt(a.querySelector('.dd-account-foot'));
+          out += `<li><span class="report-fig">${name}</span>${focus ? ` — ${focus}` : ''}${plats ? `<div class="report-sub2">${plats}</div>` : ''}${foot ? `<div class="report-src">${foot}</div>` : ''}</li>`;
+        });
+        out += `</ul>`;
+      } else if (cl.contains('dd-metrics')) {
+        const ml = txt(node.querySelector('.dd-metrics-label'));
+        out += `${ml ? `<p class="report-para"><em>${ml}</em></p>` : ''}<ul class="report-list">`;
+        node.querySelectorAll('.dd-metric').forEach((m) => {
+          out += `<li><span class="report-fig">${fig(m.querySelector('.dd-metric-num'))}</span> — ${txt(m.querySelector('.dd-metric-label'))}</li>`;
+        });
+        out += `</ul>`;
+      } else if (cl.contains('dd-hashtags')) {
+        const tags = [...node.querySelectorAll('.dd-hashtag')].map(txt).join(', ');
+        const note = txt(node.querySelector('.dd-hashtags-note'));
+        if (tags) out += `<p class="report-para">Live hashtag feeds tracked: ${tags}.${note ? ` <span class="report-src">${note}</span>` : ''}</p>`;
+      } else {
+        const blocks = cl.contains('chart-block') ? [node] : [...node.querySelectorAll('.chart-block')];
+        const items = blocks.map(ddChart).filter(Boolean).join('');
+        if (items) out += `<ul class="report-list">${items}</ul>`;
+      }
+    });
+    return out;
+  };
+
   let html = `
     <header class="report-head">
       <div class="report-eyebrow">Research Compendium — All Data Sourced &amp; Attributed</div>
@@ -835,11 +902,13 @@ function buildReportDocument() {
   [...document.querySelectorAll('main section[id]')].forEach((sec) => {
     const stats = [...sec.querySelectorAll('.stat-card')];
     const quotes = [...sec.querySelectorAll('.quote-card')].filter((c) => c.querySelector('.quote-text'));
-    if (!stats.length && !quotes.length) return;
+    const deepDive = sec.id === 'data-deep-dive' ? deepDiveHTML(sec) : '';
+    if (!stats.length && !quotes.length && !deepDive) return;
 
     const heading = `${romans[sIdx] || sIdx + 1}. ${cleanTitle(sec.querySelector('.section-title'))}`;
     sIdx++;
     html += `<section class="report-section"><h2>${heading}</h2>`;
+    if (deepDive) html += deepDive;
 
     if (stats.length) {
       html += `<h3>Key Statistics</h3><ul class="report-list">`;

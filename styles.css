@@ -1624,6 +1624,9 @@ section[id] { scroll-margin-top: 72px; }
 #report-document .report-quote strong { font-style: normal; }
 #report-document .report-attr { font-size: 10pt; margin-top: 4px; }
 #report-document .report-src { font-size: 8.5pt; color: #555; margin-top: 3px; overflow-wrap: anywhere; }
+#report-document .report-para { margin: 0 0 10px; }
+#report-document .report-para a { color: #000; }
+#report-document .report-sub2 { font-size: 10pt; color: #222; margin-top: 2px; }
 #report-document .report-foot { margin-top: 28px; border-top: 1px solid #000; padding-top: 10px; font-size: 8.5pt; color: #444; text-align: center; }
 
 /* Secondary (outline) export button for the formal report */
