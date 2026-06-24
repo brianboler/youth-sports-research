@@ -773,6 +773,87 @@ section[id] { scroll-margin-top: 72px; }
   line-height: 1.6;
 }
 
+/* Inline source links inside chart notes — inherit each section's accent. */
+.chart-note a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.35);
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+.chart-note a:hover {
+  border-bottom-color: var(--accent);
+  opacity: 0.85;
+}
+
+/* ============================================================
+   NIL ATHLETE DIRECTORY — On3 profile + Instagram links
+   (companion to the canvas charts, which can't hold links)
+   ============================================================ */
+.nil-roster-label {
+  margin-top: 20px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.nil-roster {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.nil-roster-row {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 7px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  transition: background 0.15s ease;
+}
+.nil-roster-row:hover { background: rgba(var(--accent-rgb), 0.06); }
+.nil-roster-rank {
+  color: var(--text-faint);
+  font-size: 11px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.nil-roster-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.nil-roster-name:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.nil-roster-val {
+  color: var(--text-faint);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+.nil-roster-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 165px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 11.5px;
+}
+.nil-roster-ig svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.85; }
+.nil-roster-handle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nil-roster-ig:hover { color: var(--accent); }
+.nil-roster-ig:hover svg { opacity: 1; }
+@media (max-width: 420px) {
+  .nil-roster-val { display: none; }
+}
+
 /* ============================================================
    QUOTE CARDS
    ============================================================ */
@@ -1511,10 +1592,57 @@ section[id] { scroll-margin-top: 72px; }
 .print-summary { display: none; }
 
 /* ============================================================
+   FORMAL REPORT (B&W, Times New Roman) — print-only document
+   Built by exportReport() in app.js; hidden on screen, shown for
+   printing only when <body> carries .report-mode.
+   ============================================================ */
+#report-document { display: none; }
+#report-document {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  color: #000;
+  background: #fff;
+  font-size: 11.5pt;
+  line-height: 1.5;
+  max-width: 7.2in;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  text-align: left;
+}
+#report-document * { box-sizing: border-box; }
+#report-document .report-head { text-align: center; border-bottom: 2.5px solid #000; padding-bottom: 14px; margin-bottom: 8px; }
+#report-document .report-eyebrow { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: #333; }
+#report-document .report-title { font-size: 27pt; font-weight: 700; margin: 10px 0 8px; line-height: 1.08; }
+#report-document .report-sub { font-size: 12pt; font-style: italic; color: #1a1a1a; margin: 0 auto; max-width: 5.6in; }
+#report-document .report-meta { font-size: 9.5pt; color: #444; margin-top: 12px; }
+#report-document h2 { font-size: 15pt; font-weight: 700; border-bottom: 1px solid #000; padding-bottom: 4px; margin: 24px 0 12px; }
+#report-document h3 { font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin: 16px 0 8px; }
+#report-document .report-list { margin: 0; padding: 0; list-style: none; }
+#report-document .report-list > li { margin: 0 0 11px; padding: 0; }
+#report-document .report-fig { font-weight: 700; }
+#report-document .report-qtag { font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #333; margin-bottom: 3px; }
+#report-document .report-quote { margin: 0; font-style: italic; padding-left: 14px; border-left: 2px solid #888; }
+#report-document .report-quote strong { font-style: normal; }
+#report-document .report-attr { font-size: 10pt; margin-top: 4px; }
+#report-document .report-src { font-size: 8.5pt; color: #555; margin-top: 3px; overflow-wrap: anywhere; }
+#report-document .report-foot { margin-top: 28px; border-top: 1px solid #000; padding-top: 10px; font-size: 8.5pt; color: #444; text-align: center; }
+
+/* Secondary (outline) export button for the formal report */
+.btn-export--report { background: transparent; border: 1px solid var(--border-light); color: var(--text-muted); }
+.btn-export--report:hover { border-color: var(--text-muted); color: var(--text); background: var(--surface-hover); }
+
+/* ============================================================
    PRINT STYLES
    ============================================================ */
 
 @media print {
+  /* ── Formal B&W report mode: show ONLY the report document ── */
+  body.report-mode > *:not(#report-document) { display: none !important; }
+  body.report-mode #report-document { display: block !important; }
+  body.report-mode .report-section { page-break-before: always; }
+  body.report-mode .report-list > li { page-break-inside: avoid; break-inside: avoid; }
+  body.report-mode #report-document h2,
+  body.report-mode #report-document h3 { page-break-after: avoid; break-after: avoid; }
+
   /* Override all CSS variables — all var() refs now render dark-on-white */
   :root {
     --bg: #ffffff;

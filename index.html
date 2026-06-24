@@ -33,9 +33,13 @@
       <li><a href="#data-deep-dive" class="nav-link" data-section="data-deep-dive"><span class="nav-number">04</span> Data Deep Dive</a></li>
       <li><a href="#builders" class="nav-link" data-section="builders"><span class="nav-number">05</span> Elysian Park</a></li>
     </ul>
-    <button class="btn-export" onclick="window.print()">
+    <button class="btn-export" onclick="window.print()" title="Print or save the full styled page as a PDF">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v8M5 6l3 3 3-3M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
       <span class="btn-export-text">Export PDF</span>
+    </button>
+    <button class="btn-export btn-export--report" onclick="exportReport()" title="Download a formal black-and-white report — key statistics &amp; quotes, Times New Roman">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.6h5l3.4 3.4V14a.9.9 0 0 1-.9.9H4a.9.9 0 0 1-.9-.9V2.5A.9.9 0 0 1 4 1.6z"/><path d="M9 1.6V5h3.4"/><path d="M5.4 8.4h5M5.4 10.6h5M5.4 12.8h3"/></svg>
+      <span class="btn-export-text">B&amp;W Report</span>
     </button>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
       <span class="nav-toggle-bar"></span>
@@ -918,6 +922,51 @@
         </div>
         <div class="chart-wrapper" style="height:280px;"><canvas id="chart-nil-deals"></canvas></div>
         <div class="chart-note">Sources: Fortune / Front Office Sports 2025 (Underwood, reported $10–12M over four years); CBS News Dec 2022 (James, Williams, Manning); NPR Apr 2026 (NC athlete); KTLA Jul 2023 (Wadood Jr., reported six figures — charted at the $100K floor). Bronny James, Mikey Williams &amp; Arch Manning figures are On3 NIL <em>valuations</em> (estimates), not signed deals; the rest are reported deal values.</div>
+      </div>
+
+    </div>
+
+    <!-- ── THE TOP OF THE MARKET (On3 NIL 100) ── -->
+    <div class="subsection-label"><span class="subsection-label-text">The Top of the Market</span></div>
+
+    <div class="charts-row">
+
+      <div class="chart-block fade-in">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">The Top 10 NIL Valuations Today</div>
+            <div class="chart-subtitle">On3 NIL Valuation, live ranking — June 23, 2026 (USD millions)</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-top10', 'top-10-nil-valuations-2026.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:360px;"><canvas id="chart-nil-top10"></canvas></div>
+        <div class="nil-roster-label">Profiles &amp; Instagram &mdash; name &rarr; On3, handle &rarr; Instagram</div>
+        <div class="nil-roster" id="roster-nil-top10"></div>
+        <div class="chart-note">Source: <a href="https://www.on3.com/nil/rankings/player/nil-valuations/" target="_blank" rel="noopener">On3 NIL Valuations, live rankings</a> (on3.com), retrieved June 23, 2026. The On3 NIL Valuation estimates an athlete's annual NIL earning <em>potential</em> &mdash; not a signed contract. The current No. 1, Texas QB <strong>Arch Manning ($5.4M)</strong>, leads a top 10 now dominated by proven college players &mdash; eight of the ten play football, seven of them quarterbacks. <a href="https://www.on3.com/nil/rankings/player/nil-valuations/" target="_blank" rel="noopener">Source &rarr;</a></div>
+      </div>
+
+      <div class="chart-block fade-in" data-delay="80">
+        <div class="chart-block-header">
+          <div>
+            <div class="chart-title">NIL's Elite Tier: 2023 vs. 2026</div>
+            <div class="chart-subtitle">NIL valuation by rank position &mdash; how the top of the market reshaped</div>
+          </div>
+          <div class="chart-actions">
+            <button class="btn-download" onclick="downloadChart('chart-nil-tier-shift', 'nil-elite-tier-2023-vs-2026.png')">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9"/></svg>
+              Download PNG
+            </button>
+          </div>
+        </div>
+        <div class="chart-wrapper" style="height:360px;"><canvas id="chart-nil-tier-shift"></canvas></div>
+        <div class="nil-roster-label">March 2023 top 10 &mdash; profiles &amp; Instagram (name &rarr; On3, handle &rarr; IG)</div>
+        <div class="nil-roster" id="roster-nil-2023"></div>
+        <div class="chart-note">Sources: <a href="https://www.on3.com/nil/news/top-10-on3-nil-valuations-in-the-nil-100-bronny-james-march-livvy-dunne-arch-manning/" target="_blank" rel="noopener">On3 NIL 100 (March 2023)</a> and <a href="https://www.on3.com/nil/rankings/player/nil-valuations/" target="_blank" rel="noopener">On3 NIL Valuations (live, June 23, 2026)</a>. NIL has only been permitted since <strong>July 1, 2021</strong>, so this spans nearly the entire NIL era. In 2023 the market was top-heavy &mdash; led by <em>uncommitted high-schooler</em> Bronny James at $7.2M. By 2026 the single peak is lower (Arch Manning, $5.4M), but the tier runs far deeper: the No. 10 valuation <strong>nearly doubled, $1.4M &rarr; $2.6M</strong>. Hover any point for the athlete.</div>
       </div>
 
     </div>

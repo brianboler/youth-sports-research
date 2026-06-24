@@ -579,6 +579,321 @@ function initNILDealsChart() {
 }
 
 /* ============================================================
+   CHART 8 — The Top 10 NIL Valuations Today (Section 3)
+   Live On3 NIL Valuations, retrieved June 23, 2026.
+   https://www.on3.com/nil/rankings/player/nil-valuations/
+   ============================================================ */
+function initNilTop10Chart() {
+  const el = document.getElementById('chart-nil-top10');
+  if (!el) return;
+  const ctx = el.getContext('2d');
+
+  // Rank 1 → 10, descending. In Chart.js horizontal bars, index 0 renders on top.
+  const athletes = [
+    'Arch Manning · Texas QB',
+    'Jeremiah Smith · Ohio State WR',
+    'Sam Leavitt · LSU QB',
+    'Brendan Sorsby · Texas Tech QB',
+    'Dante Moore · Oregon QB',
+    'Bryce Underwood · Michigan QB',
+    'Cam Coleman · Texas WR',
+    'JT Toppin · Texas Tech PF',
+    'LaNorris Sellers · S. Carolina QB',
+    'PJ Haggerty · Texas A&M SG',
+  ];
+  const values = [5.4, 4.2, 4.0, 3.1, 3.0, 3.0, 2.9, 2.8, 2.7, 2.6];
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: athletes,
+      datasets: [{
+        label: 'On3 NIL Valuation ($M)',
+        data: values,
+        backgroundColor: values.map((_, i) => `rgba(74, 158, 255, ${(0.95 - i * 0.062).toFixed(3)})`),
+        borderRadius: 6,
+        borderSkipped: false,
+        barThickness: 22,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: {
+            label: (item) => `  $${item.parsed.x.toFixed(1)}M — On3 NIL Valuation`,
+          }
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          grid: { color: gridColor },
+          ticks: { color: tickColor, callback: v => `$${v}M`, font: { size: 11 } }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: '#8B9BB4', font: { size: 11, weight: '500' }, padding: 8, callback: wrapTicks(24) }
+        }
+      }
+    }
+  });
+}
+
+/* ============================================================
+   CHART 9 — NIL's Elite Tier: 2023 vs. 2026 (Section 3)
+   NIL valuation by rank position. The top-heavy 2023 curve
+   (one outlier high-schooler) flattens into a deeper 2026 tier:
+   the single peak falls, the floor of the top 10 nearly doubles.
+   Sources: On3 NIL 100 (Mar 2023); On3 live valuations (Jun 23, 2026).
+   ============================================================ */
+function initNilTierShiftChart() {
+  const el = document.getElementById('chart-nil-tier-shift');
+  if (!el) return;
+  const ctx = el.getContext('2d');
+
+  const ranks = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th'];
+  const v2026 = [5.4, 4.2, 4.0, 3.1, 3.0, 3.0, 2.9, 2.8, 2.7, 2.6];
+  const v2023 = [7.2, 3.7, 3.4, 3.3, 2.6, 1.7, 1.5, 1.5, 1.5, 1.4];
+  const n2026 = ['Arch Manning', 'Jeremiah Smith', 'Sam Leavitt', 'Brendan Sorsby', 'Dante Moore', 'Bryce Underwood', 'Cam Coleman', 'JT Toppin', 'LaNorris Sellers', 'PJ Haggerty'];
+  const n2023 = ['Bronny James', 'Arch Manning', 'Livvy Dunne', 'Mikey Williams', 'Caleb Williams', 'Travis Hunter', 'Shedeur Sanders', 'Drake Maye', 'Bo Nix', 'Hansel Enmanuel'];
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ranks,
+      datasets: [
+        {
+          label: 'June 2026',
+          data: v2026,
+          _names: n2026,
+          borderColor: '#4A9EFF',
+          backgroundColor: 'rgba(74, 158, 255, 0.15)',
+          fill: true,
+          tension: 0.35,
+          pointBackgroundColor: '#4A9EFF',
+          pointBorderColor: '#0E1420',
+          pointBorderWidth: 2,
+          pointRadius: 5,
+          pointHoverRadius: 8,
+          borderWidth: 3,
+        },
+        {
+          label: 'March 2023',
+          data: v2023,
+          _names: n2023,
+          borderColor: '#5A6B85',
+          backgroundColor: 'rgba(90, 107, 133, 0.05)',
+          fill: false,
+          tension: 0.35,
+          borderDash: [6, 4],
+          pointBackgroundColor: 'transparent',
+          pointBorderColor: '#5A6B85',
+          pointBorderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          borderWidth: 2,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#8B9BB4', font: { size: 12, weight: '600' }, boxWidth: 24, boxHeight: 3, padding: 20 }
+        },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: {
+            title: (items) => `${items[0].label}-ranked valuation`,
+            label: (item) => {
+              const name = item.dataset._names ? item.dataset._names[item.dataIndex] : '';
+              return `  ${item.dataset.label}: ${name} — $${item.parsed.y.toFixed(1)}M`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: gridColor },
+          ticks: { color: '#8B9BB4', font: { size: 11, weight: '500' } },
+          title: { display: true, text: 'Rank within the top 10', color: tickColor, font: { size: 11, weight: '600' } }
+        },
+        y: {
+          min: 0, max: 8,
+          grid: { color: gridColor },
+          ticks: { color: tickColor, callback: v => `$${v}M`, font: { size: 11 } }
+        }
+      }
+    }
+  });
+}
+
+/* ============================================================
+   NIL ATHLETE DIRECTORY — On3 profile + Instagram links
+   Canvas charts can't hold links, so this companion roster makes
+   every athlete clickable. On3 profile URLs and Instagram handles
+   were read from each athlete's On3 profile "Socials" section
+   (on3.com), June 23, 2026.
+   ============================================================ */
+const NIL_TOP10_ROSTER = [
+  { name: 'Arch Manning',     meta: 'Texas · QB',             val: '$5.4M', on3: 'https://www.on3.com/rivals/arch-manning-7353/nil/',      ig: 'archmanning' },
+  { name: 'Jeremiah Smith',   meta: 'Ohio State · WR',        val: '$4.2M', on3: 'https://www.on3.com/rivals/jeremiah-smith-60214/nil/',   ig: 'Primetimejj_.4' },
+  { name: 'Sam Leavitt',      meta: 'LSU · QB',               val: '$4.0M', on3: 'https://www.on3.com/rivals/sam-leavitt-104361/nil/',     ig: 'samleavitt10' },
+  { name: 'Brendan Sorsby',   meta: 'Texas Tech · QB',        val: '$3.1M', on3: 'https://www.on3.com/rivals/brendan-sorsby-13764/nil/',   ig: 'brendansorsby15' },
+  { name: 'Dante Moore',      meta: 'Oregon · QB',            val: '$3.0M', on3: 'https://www.on3.com/rivals/dante-moore-29804/nil/',      ig: 'dantemoore' },
+  { name: 'Bryce Underwood',  meta: 'Michigan · QB',          val: '$3.0M', on3: 'https://www.on3.com/rivals/bryce-underwood-15949/nil/',  ig: '19bryce.__' },
+  { name: 'Cam Coleman',      meta: 'Texas · WR',             val: '$2.9M', on3: 'https://www.on3.com/rivals/cam-coleman-154787/nil/',     ig: 'camcoleman' },
+  { name: 'JT Toppin',        meta: 'Texas Tech · PF',        val: '$2.8M', on3: 'https://www.on3.com/rivals/jt-toppin-155447/nil/',       ig: 'j1izzle' },
+  { name: 'LaNorris Sellers', meta: 'South Carolina · QB',    val: '$2.7M', on3: 'https://www.on3.com/rivals/lanorris-sellers-145821/nil/', ig: 'lanorrisellers' },
+  { name: 'PJ Haggerty',      meta: 'Texas A&M · SG',         val: '$2.6M', on3: 'https://www.on3.com/rivals/pj-haggerty-96721/nil/',      ig: 'pj_haggerty_4' },
+];
+const NIL_2023_ROSTER = [
+  { name: 'Bronny James',     meta: 'Uncommitted · Basketball',      val: '$7.2M', on3: 'https://www.on3.com/rivals/bronny-james-144220/nil/',   ig: 'bronny' },
+  { name: 'Arch Manning',     meta: 'Texas · Football',              val: '$3.7M', on3: 'https://www.on3.com/rivals/arch-manning-7353/nil/',      ig: 'archmanning' },
+  { name: 'Livvy Dunne',      meta: 'LSU · Gymnastics',              val: '$3.4M', on3: 'https://www.on3.com/rivals/livvy-dunne-162353/nil/',     ig: 'livvydunne' },
+  { name: 'Mikey Williams',   meta: 'Memphis · Basketball',          val: '$3.3M', on3: 'https://www.on3.com/rivals/mikey-williams-89578/nil/',   ig: 'mikey' },
+  { name: 'Caleb Williams',   meta: 'USC · Football',                val: '$2.6M', on3: 'https://www.on3.com/rivals/caleb-williams-17251/nil/',   ig: 'ayeeecaleb' },
+  { name: 'Travis Hunter',    meta: 'Colorado · Football',           val: '$1.7M', on3: 'https://www.on3.com/db/travis-hunter-144752/nil/',       ig: 'db3_tip' },
+  { name: 'Shedeur Sanders',  meta: 'Colorado · Football',           val: '$1.5M', on3: 'https://www.on3.com/rivals/shedeur-sanders-107068/nil/', ig: 'shedeursanders' },
+  { name: 'Drake Maye',       meta: 'North Carolina · Football',     val: '$1.5M', on3: 'https://www.on3.com/rivals/drake-maye-38809/nil/',       ig: 'drake.maye' },
+  { name: 'Bo Nix',           meta: 'Oregon · Football',             val: '$1.5M', on3: 'https://www.on3.com/rivals/bo-nix-11186/nil/',           ig: 'bonix10' },
+  { name: 'Hansel Enmanuel',  meta: 'Northwestern St. · Basketball', val: '$1.4M', on3: 'https://www.on3.com/rivals/hansel-enmanuel-150021/nil/', ig: 'enmanuelhansel' },
+];
+
+function renderNilRoster(elId, rows) {
+  const el = document.getElementById(elId);
+  if (!el) return;
+  const igIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>';
+  el.innerHTML = rows.map((r, i) => `
+    <div class="nil-roster-row">
+      <span class="nil-roster-rank">${i + 1}</span>
+      <a class="nil-roster-name" href="${r.on3}" target="_blank" rel="noopener" title="${r.meta} — On3 profile">${r.name}</a>
+      <span class="nil-roster-val">${r.val}</span>
+      <a class="nil-roster-ig" href="https://www.instagram.com/${r.ig}/" target="_blank" rel="noopener" aria-label="${r.name} on Instagram">${igIcon}<span class="nil-roster-handle">@${r.ig}</span></a>
+    </div>`).join('');
+}
+
+/* ============================================================
+   FORMAL REPORT EXPORT — black & white, Times New Roman
+   Builds a clean, print-only document containing every section's
+   key statistics and quotes, scraped live from the page so it
+   never drifts. Offered alongside the styled "Export PDF" so the
+   reader can choose either form. exportReport() shows it only for
+   printing (body.report-mode), then cleans up.
+   ============================================================ */
+function buildReportDocument() {
+  const existing = document.getElementById('report-document');
+  if (existing) existing.remove();
+
+  const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const txt = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+  // Stat figures animate from 0 via initCountUp(); the authored value lives in
+  // dataset.countRaw. Read that so the report shows real numbers, not "0".
+  const fig = (el) => (el ? (el.dataset.countRaw || el.textContent).replace(/\s+/g, ' ').trim() : '');
+  const cleanTitle = (el) => (el ? el.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '');
+  const attrOf = (card) => {
+    const a = card.querySelector('.quote-attribution');
+    if (!a) return '';
+    const clone = a.cloneNode(true);
+    const span = clone.querySelector('span');
+    const context = span ? span.textContent.trim() : '';
+    if (span) span.remove();
+    const author = clone.textContent.replace(/\s+/g, ' ').trim();
+    return [author, context].filter(Boolean).join(' — ');
+  };
+
+  let html = `
+    <header class="report-head">
+      <div class="report-eyebrow">Research Compendium — All Data Sourced &amp; Attributed</div>
+      <h1 class="report-title">Youth Sports in America</h1>
+      <p class="report-sub">${txt(document.querySelector('.hero-subtitle'))}</p>
+      <div class="report-meta">Prepared ${today}</div>
+    </header>`;
+
+  const heroStats = [...document.querySelectorAll('.hero-stat')];
+  if (heroStats.length) {
+    html += `<section class="report-exec"><h2>Key Figures</h2><ul class="report-list">`;
+    heroStats.forEach((s) => {
+      const num = fig(s.querySelector('.hero-stat-number'));
+      const label = txt(s.querySelector('.hero-stat-label'));
+      const url = s.querySelector('.hero-stat-link')?.getAttribute('href') || '';
+      html += `<li><span class="report-fig">${num}</span> — ${label}` +
+              (url ? `<div class="report-src">${url}</div>` : '') + `</li>`;
+    });
+    html += `</ul></section>`;
+  }
+
+  const romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+  let sIdx = 0;
+  [...document.querySelectorAll('main section[id]')].forEach((sec) => {
+    const stats = [...sec.querySelectorAll('.stat-card')];
+    const quotes = [...sec.querySelectorAll('.quote-card')].filter((c) => c.querySelector('.quote-text'));
+    if (!stats.length && !quotes.length) return;
+
+    const heading = `${romans[sIdx] || sIdx + 1}. ${cleanTitle(sec.querySelector('.section-title'))}`;
+    sIdx++;
+    html += `<section class="report-section"><h2>${heading}</h2>`;
+
+    if (stats.length) {
+      html += `<h3>Key Statistics</h3><ul class="report-list">`;
+      stats.forEach((c) => {
+        const num = fig(c.querySelector('.stat-number'));
+        const desc = (c.querySelector('.stat-desc')?.innerHTML || '').trim();
+        const src = txt(c.querySelector('.stat-source'));
+        const url = c.querySelector('.stat-link')?.getAttribute('href') || '';
+        html += `<li><span class="report-fig">${num}</span> — ${desc}` +
+                ((src || url) ? `<div class="report-src">Source: ${src}${url ? ` — ${url}` : ''}</div>` : '') + `</li>`;
+      });
+      html += `</ul>`;
+    }
+
+    if (quotes.length) {
+      html += `<h3>Key Quotes</h3><ul class="report-list report-quotes">`;
+      quotes.forEach((c) => {
+        const tag = txt(c.querySelector('.quote-tag'));
+        const text = (c.querySelector('.quote-text')?.innerHTML || '').trim();
+        const attr = attrOf(c);
+        const url = c.querySelector('.quote-link')?.getAttribute('href') || '';
+        html += `<li>` +
+                (tag ? `<div class="report-qtag">${tag}</div>` : '') +
+                `<blockquote class="report-quote">${text}</blockquote>` +
+                (attr ? `<div class="report-attr">— ${attr}</div>` : '') +
+                (url ? `<div class="report-src">Source: ${url}</div>` : '') + `</li>`;
+      });
+      html += `</ul>`;
+    }
+    html += `</section>`;
+  });
+
+  html += `<footer class="report-foot">Youth Sports in America — research compendium. Generated ${today}; every figure retains its original source as cited above.</footer>`;
+
+  const doc = document.createElement('div');
+  doc.id = 'report-document';
+  doc.innerHTML = html;
+  document.body.appendChild(doc);
+  return doc;
+}
+
+function exportReport() {
+  buildReportDocument();
+  document.body.classList.add('report-mode');
+  const cleanup = () => {
+    document.body.classList.remove('report-mode');
+    window.removeEventListener('afterprint', cleanup);
+  };
+  window.addEventListener('afterprint', cleanup);
+  setTimeout(cleanup, 2000); // fallback if afterprint never fires
+  window.print();
+}
+
+/* ============================================================
    CHART DOWNLOAD UTILITY
    ============================================================ */
 function downloadChart(canvasId, filename) {
@@ -1699,6 +2014,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initTravelBaseballChart();
     initNILMarketChart();
     initNILDealsChart();
+    initNilTop10Chart();
+    initNilTierShiftChart();
+    renderNilRoster('roster-nil-top10', NIL_TOP10_ROSTER);
+    renderNilRoster('roster-nil-2023', NIL_2023_ROSTER);
     initAccountGrowthChart();
     initPlatformDemographicsChart();
     initSpendingVsCpiChart();
