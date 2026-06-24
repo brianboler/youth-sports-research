@@ -5,6 +5,14 @@
 Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
 Chart.defaults.color = '#8B9BB4';
 
+/* Refined, restrained motion: charts ease in on first draw, with data points
+   cascading slightly. The mode guard keeps hover/resize re-draws instant;
+   motion is fully disabled under reduced-motion in initChartsOnScroll(). */
+Chart.defaults.animation.duration = 850;
+Chart.defaults.animation.easing = 'easeOutQuart';
+Chart.defaults.animation.delay = (ctx) =>
+  (ctx.type === 'data' && ctx.mode === 'default') ? ctx.dataIndex * 40 : 0;
+
 /* Canvas background plugin — ensures PNGs look great on download */
 const bgPlugin = {
   id: 'canvasBg',
@@ -2060,6 +2068,63 @@ function initHashtagsChart() {
   });
 }
 
+/* ============================================================
+   SCROLL-TRIGGERED CHART REVEAL
+   Each chart initializes (and plays its draw animation) the first
+   time it enters the viewport, so it reveals as the reader reaches
+   it instead of all rendering off-screen on load. Honors
+   prefers-reduced-motion; falls back to drawing everything up front
+   where IntersectionObserver is unavailable.
+   ============================================================ */
+const CHART_INITS = {
+  'chart-social': initSocialChart,
+  'chart-creator-economy': initCreatorEconomyChart,
+  'chart-trends': initTrendsChart,
+  'chart-hashtags': initHashtagsChart,
+  'chart-sport-cost': initSportCostChart,
+  'chart-cost-breakdown': initCostBreakdownChart,
+  'chart-cost-ladder': initCostLadderChart,
+  'chart-sport-spend': initSportSpendChart,
+  'chart-travel-baseball': initTravelBaseballChart,
+  'chart-nil-market': initNILMarketChart,
+  'chart-nil-deals': initNILDealsChart,
+  'chart-nil-top10': initNilTop10Chart,
+  'chart-nil-tier-shift': initNilTierShiftChart,
+  'chart-account-growth': initAccountGrowthChart,
+  'chart-platform-age': initPlatformDemographicsChart,
+  'chart-spending-vs-cpi': initSpendingVsCpiChart,
+  'chart-global-market': initGlobalMarketChart,
+  'chart-nil-by-sport': initNilBySportChart,
+  'chart-nil-gender': initNilGenderChart,
+  'chart-hs-nil-states': initHsNilStatesChart,
+  'chart-cost-income': initCostIncomeChart,
+  'chart-elite11': initElite11Chart,
+};
+
+function initChartsOnScroll() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ids = Object.keys(CHART_INITS).filter((id) => document.getElementById(id));
+  const draw = (id) => { try { CHART_INITS[id](); } catch (e) { /* isolate a single chart failure */ } };
+
+  if (reduce) Chart.defaults.animation = false; // draw instantly, no motion
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    ids.forEach(draw);
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        draw(entry.target.id);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+  ids.forEach((id) => io.observe(document.getElementById(id)));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initFadeIns();
@@ -2072,30 +2137,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountUp();
 
   setTimeout(() => {
-    initSocialChart();
-    initCreatorEconomyChart();
-    initTrendsChart();
-    initHashtagsChart();
-    initSportCostChart();
-    initCostBreakdownChart();
-    initCostLadderChart();
-    initSportSpendChart();
-    initTravelBaseballChart();
-    initNILMarketChart();
-    initNILDealsChart();
-    initNilTop10Chart();
-    initNilTierShiftChart();
     renderNilRoster('roster-nil-top10', NIL_TOP10_ROSTER);
     renderNilRoster('roster-nil-2023', NIL_2023_ROSTER);
-    initAccountGrowthChart();
-    initPlatformDemographicsChart();
-    initSpendingVsCpiChart();
-    initGlobalMarketChart();
-    initNilBySportChart();
-    initNilGenderChart();
-    initHsNilStatesChart();
-    initCostIncomeChart();
-    initElite11Chart();
+    initChartsOnScroll();
   }, 100);
 });
 
