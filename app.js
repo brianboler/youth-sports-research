@@ -2182,7 +2182,7 @@ function initAthleteIndex() {
     { name:'McKenna “Mak” Whitham', sport:'soccer', era:'current', role:'Youth / NWSL academy', nil:'Nike deal', nilVal:0.6, nilNote:'youngest-ever Nike NIL', igLabel:"Nike's youngest NIL signee →", igUrl:'https://www.espn.com/soccer/story/_/id/39539772/usa-youth-soccer-whitham-youngest-athlete-sign-nike-nil-deal' },
 
     // ── Past (graduated / turned pro / retired) ──
-    { name:'Bronny James', sport:'basketball', era:'past', role:'USC → NBA Lakers', nil:'$5.9M', nilVal:5.9, nilNote:'peak On3 valuation', igLabel:'@bronny · 7.7M', igUrl:'https://www.instagram.com/bronny/' },
+    { name:'Bronny James', sport:'basketball', era:'past', role:'USC → NBA Lakers', nil:'$7.5M', nilVal:7.5, nilNote:'peak On3 valuation', igLabel:'@bronny · 7.7M', igUrl:'https://www.instagram.com/bronny/' },
     { name:'Cooper Flagg', sport:'basketball', era:'past', role:'Duke → NBA Mavericks', nil:'$4.8M', nilVal:4.8, nilNote:'peak On3 valuation', igLabel:'924K IG · On3 profile →', igUrl:'https://www.on3.com/rivals/cooper-flagg-152774/nil/' },
     { name:'Shedeur Sanders', sport:'football', era:'past', role:'Colorado → NFL Browns', nil:'$4.7M', nilVal:4.7, nilNote:'peak ~$6.5M (On3)', igLabel:'@shedeursanders · 1.8M', igUrl:'https://www.instagram.com/shedeursanders/' },
     { name:'Livvy Dunne', sport:'gymnastics', era:'past', role:'LSU — retired 2025', nil:'$4.2M', nilVal:4.21, nilNote:'peak On3 valuation', igLabel:'@livvydunne · 5.3M', igUrl:'https://www.instagram.com/livvydunne/' },
